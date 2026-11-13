@@ -14,16 +14,17 @@
   <meta name="robots" content="index, follow" />
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/images/logo.png" />
+  <link rel="manifest" href="/manifest.json" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.greenempirebuild.com/"},{"@type":"ListItem","position":2,"name":"Accessibility"}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/theme.css" />
-  <link rel="stylesheet" href="/css/builders-design.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="/css/bundle.css" />
+  
 </head>
 <body>
 
@@ -31,7 +32,7 @@
   <nav class="main-nav" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="/" class="nav-logo">
-        <img src="/images/logo.png" alt="Green Empire Builders logo" height="96" />
+        <img src="/images/logo.png" alt="Green Empire Builders logo" width="96" height="96" />
       </a>
       <ul class="nav-links">
         <li class="has-dropdown">
@@ -65,7 +66,7 @@
 </header>
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-header">
-    <img src="/images/logo.png" alt="Green Empire Builders" height="40" />
+    <img src="/images/logo.png" alt="Green Empire Builders" width="40" height="40" />
     <button id="mobile-close" aria-label="Close">✕</button>
   </div>
   <a href="/request-service.html" class="btn btn-primary mobile-cta">Get Free Estimate</a>
@@ -91,7 +92,7 @@
   <div class="footer-main">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="/"><img src="/images/logo.png" alt="Green Empire Builders" height="72" class="footer-logo" /></a>
+        <a href="/"><img src="/images/logo-light.png" alt="Green Empire Builders" width="72" height="72" class="footer-logo" /></a>
         <p>Long Island's trusted general contractor & home builder. Licensed, insured, and locally based in Nassau & Suffolk Counties.</p>
         <a href="tel:5165950684" class="footer-phone">(516) 595-0684</a>
         <p class="footer-address">5020 Sunrise Hwy, Massapequa Park, NY 11762</p>

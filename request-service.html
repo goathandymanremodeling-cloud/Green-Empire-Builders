@@ -14,16 +14,17 @@
   <meta name="robots" content="index, follow" />
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/images/logo.png" />
+  <link rel="manifest" href="/manifest.json" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.greenempirebuild.com/"},{"@type":"ListItem","position":2,"name":"Request Service"}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/theme.css" />
-  <link rel="stylesheet" href="/css/builders-design.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="/css/bundle.css" />
+  
 </head>
 <body>
 
@@ -31,7 +32,7 @@
   <nav class="main-nav" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="/" class="nav-logo">
-        <img src="/images/logo.png" alt="Green Empire Builders logo" height="96" />
+        <img src="/images/logo.png" alt="Green Empire Builders logo" width="96" height="96" />
       </a>
       <ul class="nav-links">
         <li class="has-dropdown">
@@ -65,7 +66,7 @@
 </header>
 <div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-header">
-    <img src="/images/logo.png" alt="Green Empire Builders" height="40" />
+    <img src="/images/logo.png" alt="Green Empire Builders" width="40" height="40" />
     <button id="mobile-close" aria-label="Close">✕</button>
   </div>
   <a href="/request-service.html" class="btn btn-primary mobile-cta">Get Free Estimate</a>
@@ -115,16 +116,16 @@
   </div>
   <form action="https://hooks.zapier.com/hooks/catch/26765756/uv12zer/" method="POST" class="booking-form" data-phone="(516) 595-0684">
     <div class="form-row">
-      <div class="form-group"><label>First Name *</label><input type="text" name="first_name" required placeholder="John" /></div>
-      <div class="form-group"><label>Last Name *</label><input type="text" name="last_name" required placeholder="Smith" /></div>
+      <div class="form-group"><label for="f-first-name">First Name *</label><input type="text" id="f-first-name" name="first_name" required placeholder="John" /></div>
+      <div class="form-group"><label for="f-last-name">Last Name *</label><input type="text" id="f-last-name" name="last_name" required placeholder="Smith" /></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label>Phone *</label><input type="tel" name="phone" required placeholder="(516) 595-0684" /></div>
-      <div class="form-group"><label>ZIP Code *</label><input type="text" name="zip" required placeholder="11762" maxlength="5" /></div>
+      <div class="form-group"><label for="f-phone">Phone *</label><input type="tel" id="f-phone" name="phone" required placeholder="(516) 595-0684" /></div>
+      <div class="form-group"><label for="f-zip">ZIP Code *</label><input type="text" id="f-zip" name="zip" required placeholder="11762" maxlength="5" /></div>
     </div>
-    <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="you@email.com" /></div>
-    <div class="form-group"><label>Service Needed *</label>
-      <select name="service" required><option value="">Select a service...</option><option value="home-additions">Home Additions</option>
+    <div class="form-group"><label for="f-email">Email</label><input type="email" id="f-email" name="email" placeholder="you@email.com" /></div>
+    <div class="form-group"><label for="f-service">Service Needed *</label>
+      <select id="f-service" name="service" required><option value="">Select a service...</option><option value="home-additions">Home Additions</option>
 <option value="kitchen-remodeling">Kitchen Remodeling</option>
 <option value="bathroom-remodeling">Bathroom Remodeling</option>
 <option value="dormer-construction">Dormer Construction</option>
@@ -132,7 +133,7 @@
 <option value="full-home-renovation">Full Home Renovation</option>
 <option value="custom-home-building">Custom Home Building</option><option value="other">Other / Not Sure</option></select>
     </div>
-    <div class="form-group"><label>Project Details</label><textarea name="message" rows="4" placeholder="Describe your project, property size, timeline..."></textarea></div>
+    <div class="form-group"><label for="f-message">Project Details</label><textarea id="f-message" name="message" rows="4" placeholder="Describe your project, property size, timeline..."></textarea></div>
     <input type="text" name="_gotcha" style="display:none" />
     <input type="hidden" name="_subject" value="New Estimate Request — Green Empire Builders" />
     <input type="hidden" name="_next" value="/thank-you.html" />
@@ -149,7 +150,7 @@
   <div class="footer-main">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="/"><img src="/images/logo.png" alt="Green Empire Builders" height="72" class="footer-logo" /></a>
+        <a href="/"><img src="/images/logo-light.png" alt="Green Empire Builders" width="72" height="72" class="footer-logo" /></a>
         <p>Long Island's trusted general contractor & home builder. Licensed, insured, and locally based in Nassau & Suffolk Counties.</p>
         <a href="tel:5165950684" class="footer-phone">(516) 595-0684</a>
         <p class="footer-address">5020 Sunrise Hwy, Massapequa Park, NY 11762</p>
