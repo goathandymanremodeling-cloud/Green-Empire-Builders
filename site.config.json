@@ -619,6 +619,222 @@
       ]
     },
     {
+      "slug": "garden-city",
+      "name": "Garden City",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Mineola",
+        "Westbury",
+        "East Meadow",
+        "Rockville Centre"
+      ]
+    },
+    {
+      "slug": "westbury",
+      "name": "Westbury",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Garden City",
+        "Mineola",
+        "East Meadow",
+        "Jericho"
+      ]
+    },
+    {
+      "slug": "roslyn",
+      "name": "Roslyn",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "East Hills",
+        "Manhasset",
+        "Port Washington",
+        "Mineola"
+      ]
+    },
+    {
+      "slug": "mineola",
+      "name": "Mineola",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Garden City",
+        "Westbury",
+        "Roslyn",
+        "East Hills"
+      ]
+    },
+    {
+      "slug": "sands-point",
+      "name": "Sands Point",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Port Washington",
+        "Manhasset",
+        "Roslyn"
+      ]
+    },
+    {
+      "slug": "plandome",
+      "name": "Plandome",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Manhasset",
+        "Plandome Manor",
+        "Port Washington",
+        "Flower Hill"
+      ]
+    },
+    {
+      "slug": "old-westbury",
+      "name": "Old Westbury",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Westbury",
+        "Jericho",
+        "Brookville",
+        "Roslyn"
+      ]
+    },
+    {
+      "slug": "brookville",
+      "name": "Brookville",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Old Brookville",
+        "Muttontown",
+        "Jericho",
+        "Old Westbury"
+      ]
+    },
+    {
+      "slug": "old-brookville",
+      "name": "Old Brookville",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Brookville",
+        "Muttontown",
+        "Jericho",
+        "Syosset"
+      ]
+    },
+    {
+      "slug": "plandome-manor",
+      "name": "Plandome Manor",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Plandome",
+        "Manhasset",
+        "Port Washington"
+      ]
+    },
+    {
+      "slug": "manhasset",
+      "name": "Manhasset",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Plandome",
+        "Flower Hill",
+        "Lake Success",
+        "Port Washington"
+      ]
+    },
+    {
+      "slug": "lake-success",
+      "name": "Lake Success",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Manhasset",
+        "East Hills",
+        "Kings Point"
+      ]
+    },
+    {
+      "slug": "east-hills",
+      "name": "East Hills",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Roslyn",
+        "Lake Success",
+        "Jericho",
+        "Syosset"
+      ]
+    },
+    {
+      "slug": "kings-point",
+      "name": "Kings Point",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Lake Success",
+        "Manhasset",
+        "Sands Point"
+      ]
+    },
+    {
+      "slug": "flower-hill",
+      "name": "Flower Hill",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Manhasset",
+        "Port Washington",
+        "Roslyn",
+        "Plandome"
+      ]
+    },
+    {
+      "slug": "jericho",
+      "name": "Jericho",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Syosset",
+        "Westbury",
+        "Old Westbury",
+        "Plainview"
+      ]
+    },
+    {
+      "slug": "syosset",
+      "name": "Syosset",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Jericho",
+        "Plainview",
+        "Muttontown",
+        "Melville"
+      ]
+    },
+    {
+      "slug": "port-washington",
+      "name": "Port Washington",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Sands Point",
+        "Manhasset",
+        "Plandome",
+        "Roslyn"
+      ]
+    },
+    {
+      "slug": "lynbrook",
+      "name": "Lynbrook",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Rockville Centre",
+        "Baldwin",
+        "Oceanside",
+        "Freeport"
+      ]
+    },
+    {
+      "slug": "muttontown",
+      "name": "Muttontown",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Syosset",
+        "Brookville",
+        "Jericho",
+        "Melville"
+      ]
+    },
+    {
       "slug": "amityville",
       "name": "Amityville",
       "county": "Suffolk",
@@ -683,29 +899,222 @@
         "Brentwood",
         "Bay Shore"
       ]
+    },
+    {
+      "slug": "bay-shore",
+      "name": "Bay Shore",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Brightwaters",
+        "West Islip",
+        "Deer Park",
+        "North Babylon"
+      ]
+    },
+    {
+      "slug": "bayport",
+      "name": "Bayport",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Holbrook",
+        "Ronkonkoma",
+        "Medford"
+      ]
+    },
+    {
+      "slug": "brightwaters",
+      "name": "Brightwaters",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Bay Shore",
+        "West Islip",
+        "Bayport"
+      ]
+    },
+    {
+      "slug": "cold-spring-harbor",
+      "name": "Cold Spring Harbor",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Lloyd Harbor",
+        "Syosset",
+        "Melville"
+      ]
+    },
+    {
+      "slug": "commack",
+      "name": "Commack",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Dix Hills",
+        "Smithtown",
+        "Hauppauge",
+        "East Northport"
+      ]
+    },
+    {
+      "slug": "dix-hills",
+      "name": "Dix Hills",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Melville",
+        "Commack",
+        "Deer Park",
+        "East Farmingdale"
+      ]
+    },
+    {
+      "slug": "east-farmingdale",
+      "name": "East Farmingdale",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Farmingdale",
+        "Melville",
+        "West Babylon",
+        "Deer Park"
+      ]
+    },
+    {
+      "slug": "east-northport",
+      "name": "East Northport",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Commack",
+        "Smithtown",
+        "Dix Hills"
+      ]
+    },
+    {
+      "slug": "hauppauge",
+      "name": "Hauppauge",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Smithtown",
+        "Islandia",
+        "Commack",
+        "Ronkonkoma"
+      ]
+    },
+    {
+      "slug": "holbrook",
+      "name": "Holbrook",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Ronkonkoma",
+        "Islandia",
+        "Bayport",
+        "Medford"
+      ]
+    },
+    {
+      "slug": "islandia",
+      "name": "Islandia",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Hauppauge",
+        "Ronkonkoma",
+        "Holbrook"
+      ]
+    },
+    {
+      "slug": "lloyd-harbor",
+      "name": "Lloyd Harbor",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Cold Spring Harbor",
+        "Syosset",
+        "Melville"
+      ]
+    },
+    {
+      "slug": "manorville",
+      "name": "Manorville",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Medford",
+        "Ronkonkoma",
+        "Holbrook"
+      ]
+    },
+    {
+      "slug": "medford",
+      "name": "Medford",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Manorville",
+        "Holbrook",
+        "Ronkonkoma"
+      ]
+    },
+    {
+      "slug": "melville",
+      "name": "Melville",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Dix Hills",
+        "Syosset",
+        "Plainview",
+        "Farmingdale"
+      ]
+    },
+    {
+      "slug": "north-babylon",
+      "name": "North Babylon",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Babylon",
+        "West Babylon",
+        "Deer Park",
+        "West Islip"
+      ]
+    },
+    {
+      "slug": "ronkonkoma",
+      "name": "Ronkonkoma",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Islandia",
+        "Holbrook",
+        "Hauppauge",
+        "Medford"
+      ]
+    },
+    {
+      "slug": "smithtown",
+      "name": "Smithtown",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Hauppauge",
+        "Commack",
+        "East Northport"
+      ]
+    },
+    {
+      "slug": "west-islip",
+      "name": "West Islip",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Bay Shore",
+        "North Babylon",
+        "Babylon",
+        "Brightwaters"
+      ]
     }
   ],
   "reviews": [
     {
-      "name": "James R.",
-      "location": "Massapequa, NY",
-      "date": "2025-12-01",
-      "text": "Green Empire Builders added a full second story to our home and the result exceeded every expectation. The crew was professional, the project stayed on schedule, and the craftsmanship is outstanding. Best contractor we've ever worked with.",
-      "rating": 5
+      "name": "Koomi Tzaigenblat",
+      "location": "Long Island, NY",
+      "date": "2026-06-01",
+      "rating": 5,
+      "text": "They came to my house and renovated the kitchen and living room. The result was great and they were very transparent and honest about the work and pricing. Really happy that I chose them to do the project in my house."
     },
     {
-      "name": "Patricia M.",
-      "location": "Merrick, NY",
-      "date": "2025-10-15",
-      "text": "We hired Green Empire for a complete kitchen and bathroom remodel. The attention to detail was incredible — they respected our home, communicated every step of the way, and the finished product looks like something out of a magazine.",
-      "rating": 5
-    },
-    {
-      "name": "David S.",
-      "location": "Wantagh, NY",
-      "date": "2025-09-20",
-      "text": "From the initial consultation to the final walkthrough, Green Empire Builders was exceptional. They converted our unfinished basement into a beautiful living space on time and on budget. I've already referred them to three neighbors.",
-      "rating": 5
+      "name": "Ari",
+      "location": "Long Island, NY",
+      "date": "2026-09-01",
+      "rating": 5,
+      "text": "Green Empire Builders did a great job renovating my dad my basement. The whole process went smoothly, and they were very helpful throughout the project. I'm really happy with how everything turned out, especially for the price. Great quality work at a fair price."
     }
   ],
   "faqs": [

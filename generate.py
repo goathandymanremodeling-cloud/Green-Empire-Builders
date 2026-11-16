@@ -328,9 +328,13 @@ def head(title, desc, canonical, schema="", extra=""):
 </head>
 <body>"""
 
+FILLED_STAR = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="filled-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+
+def filled_stars(n=5):
+    return FILLED_STAR * n
+
 def reviews_badge():
-    stars = ICON["star"] * 5
-    return f'<div class="reviews-badge"><span class="rb-stars">{stars}</span><span class="rb-text"><strong>5.0</strong> from 11 Google reviews</span></div>'
+    return f'<div class="reviews-badge"><span class="rb-stars">{filled_stars(5)}</span><span class="rb-text"><strong>5.0</strong> from 14 Google reviews</span></div>'
 
 BENEFIT_TAIL = [
     "Free custom design preview",
@@ -440,8 +444,8 @@ def booking_form(compact=False):
 def review_cards(city=None):
     cards = []
     for r in REVIEWS:
-        loc = city + ", NY" if city else r["location"]
-        stars = ICON["star"] * r["rating"]
+        loc = r["location"]
+        stars = filled_stars(r["rating"])
         parts = r["name"].split()
         initials = (parts[0][0] + parts[-1][0]).upper() if len(parts) > 1 else parts[0][:2].upper()
         cards.append(f"""
@@ -495,11 +499,11 @@ _reviews_json = json.dumps([{
 } for r in REVIEWS])
 
 # Build aggregateRating
-_avg_rating = sum(r["rating"] for r in REVIEWS) / len(REVIEWS) if REVIEWS else 5
+# Aggregate matches the Google Business Profile (verified Nov 16, 2026): 5.0 from 14 reviews.
 _aggregate_rating = json.dumps({
     "@type": "AggregateRating",
-    "ratingValue": str(round(_avg_rating, 1)),
-    "reviewCount": str(len(REVIEWS)),
+    "ratingValue": "5.0",
+    "reviewCount": "14",
     "bestRating": "5",
     "worstRating": "1"
 })
@@ -1089,8 +1093,11 @@ def make_city_page(area):
   }}
   </script>"""
 
-    service_list = "\n".join(
-        f'<li><a href="/services/{s["slug"]}/">{s["name"]} in {city}</a> — {_first_sentence(s["description"])}</li>'
+    service_blocks = "\n".join(
+        f"""<div class="city-service">
+        <h4><a href="/services/{s["slug"]}/">{s["name"]} in {city}</a></h4>
+        <p>{_first_sentence(s["description"])}</p>
+      </div>"""
         for s in SERVICES
     )
 
@@ -1118,11 +1125,14 @@ def make_city_page(area):
   <div class="container content-sidebar-layout">
     <div class="content-main">
       <h2>Your Local {B['industry']} Experts in {city}</h2>
-      <p>When {city} homeowners need reliable {B['industryLower']}, they call {NAME}. We are based right here in {B['city']}, just minutes away, not a national franchise sending whoever is available. Our team knows {county} County properties and delivers consistent, high-quality work on every project.</p>
-      <p>From kitchen remodels and bathroom renovations to full home additions and custom builds, we handle all phases of construction for homeowners throughout {city} and surrounding {county} County.</p>
+      <p>When {city} homeowners plan a remodel, an addition or a renovation, they call {NAME} — a family-owned remodeling company based in {B['city']}, serving all of {county} County. No national franchise and no rotating crews: one local team that knows Long Island homes, explains the work in plain language, and stands behind every project.</p>
+      <p>From kitchen remodels and bathroom renovations to finished basements, dormers, home additions and full home renovations, we handle every phase of construction for homeowners in {city} — starting with a free custom design preview and one written quote before any work begins.</p>
+      {reviews_badge()}
 
       <h3>Services We Offer in {city}, NY</h3>
-      <ul class="check-list">{service_list}</ul>
+      <div class="city-services">
+        {service_blocks}
+      </div>
 
       <h3>Areas Near {city} We Also Serve</h3>
       <p>In addition to {city}, we serve {nearby} and more throughout {county} County.
@@ -1142,7 +1152,7 @@ def make_city_page(area):
 
 <section class="section section-light">
   <div class="container">
-    <h2 class="text-center mb-4">What {city} Residents Say</h2>
+    <h2 class="text-center mb-4">What Our Customers Say</h2>
     <div class="review-grid">{review_cards(city)}</div>
   </div>
 </section>
@@ -1342,7 +1352,7 @@ def make_faq():
 def make_reviews():
     all_reviews = "\n".join(f"""
     <div class="review-card">
-      <div class="review-stars">{ICON["star"] * r['rating']}</div>
+      <div class="review-stars">{filled_stars(r['rating'])}</div>
       <p class="review-text">"{r['text']}"</p>
       <div class="review-author">{r['name']}</div>
       <div class="review-location">{r['location']}</div>
@@ -1360,7 +1370,8 @@ def make_reviews():
 <section class="page-hero">
   <div class="container">
     <h1>Customer Reviews</h1>
-    <p>See what Long Island homeowners and businesses say about {NAME}.</p>
+    <p>See what Long Island homeowners say about {NAME}.</p>
+    {reviews_badge()}
   </div>
 </section>
 <section class="section">
