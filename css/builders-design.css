@@ -539,3 +539,19 @@ a.card-link:hover { color: var(--accent); }
 /* ── Video play button: vivid gold ──────────────────────────── */
 .video-play { background: rgba(242,183,5,.96); box-shadow: 0 8px 30px rgba(0,0,0,.35), 0 0 0 6px rgba(242,183,5,.22); }
 .video-play:hover { background: #FFC91F; }
+
+/* ── Landing-formula components (Nov 2026 content upgrade) ── */
+.reviews-badge{display:inline-flex;align-items:center;gap:.55rem;margin:.75rem 0 1.25rem}
+.reviews-badge .rb-stars{display:inline-flex;gap:1px;color:var(--accent,#F2B705);line-height:0}
+.reviews-badge .rb-stars svg{width:16px;height:16px}
+.reviews-badge .rb-text{font-size:.95rem}
+.hero-benefits{margin:1rem 0 1.5rem;text-align:left;max-width:640px}
+.page-hero .check-list li{color:#fff}
+.covers-grid{grid-template-columns:repeat(2,1fr)}
+.content-main .steps-grid{grid-template-columns:repeat(2,1fr)}
+.pricing-card{border:1px solid var(--accent,#F2B705);border-radius:12px;padding:1.5rem;margin:1.25rem 0 2rem;background:rgba(242,183,5,.05)}
+.pricing-card h3{margin-top:0}
+.pricing-card .reviews-badge{margin-bottom:0}
+.faq-list{margin-bottom:2rem}
+.booking-card-header .reviews-badge{margin:.35rem 0 .15rem}
+@media(max-width:700px){.covers-grid{grid-template-columns:1fr}.content-main .steps-grid{grid-template-columns:1fr}}
