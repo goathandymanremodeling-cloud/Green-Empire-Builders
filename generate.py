@@ -371,6 +371,7 @@ def booking_form(compact=False):
     </div>
     <div class="form-group"><label for="f-message">Project Details</label><textarea id="f-message" name="message" rows="4" placeholder="Describe your project, property size, timeline..."></textarea></div>
     <input type="text" name="bot-field" style="display:none" />
+    <button type="submit" class="btn btn-primary btn-block">Send My Request →</button>
     <p class="form-disclaimer">We respect your privacy. No spam, ever.</p>
   </form>
 </div>"""
