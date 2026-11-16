@@ -216,6 +216,7 @@ def nav(active=""):
         <li><a href="/about/" class="{'active' if active=='about' else ''}">About Us</a></li>
         <li><a href="/service-areas/" class="{'active' if active=='areas' else ''}">Service Areas</a></li>
         <li><a href="/reviews/" class="{'active' if active=='reviews' else ''}">Reviews</a></li>
+        <li><a href="/blog/" class="{'active' if active=='blog' else ''}">Articles</a></li>
         <li><a href="/faq/" class="{'active' if active=='faq' else ''}">FAQ</a></li>
       </ul>
       <div class="nav-cta">
@@ -296,6 +297,11 @@ def footer():
     </div>
   </div>
 </footer>
+<div class="social-side" aria-label="Follow us on social media">
+  <span class="social-side-label">Follow Us</span>
+  <a href="{B['facebook']}" target="_blank" rel="noopener" aria-label="Green Empire Builders on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+  <a href="{B['instagram']}" target="_blank" rel="noopener" aria-label="Green Empire Builders on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+</div>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 <script src="/js/main.js"></script>"""
 
@@ -1530,83 +1536,131 @@ def make_thank_you():
 # PAGES: Blog articles
 # ─────────────────────────────────────────────────────────
 
+ARTICLES = [
+    {
+        "slug": "15-amp-vs-20-amp-outlets",
+        "title": "15 Amp vs. 20 Amp Outlets: What's the Difference?",
+        "desc": "15 amp and 20 amp outlets look almost the same, but they are not interchangeable. How to tell them apart, where each one belongs, and the mistakes that cause trouble — from the Green Empire Builders team.",
+        "body": """
+<p>Walk into any Long Island home and you will see both kinds of outlets — often in the same room. A 15 amp outlet and a 20 amp outlet look nearly identical, and most homeowners never think about the difference. Until a breaker keeps tripping, or an inspection flags it during a remodel. Here is how to tell them apart, and where each one actually belongs.</p>
+<h2>How to Spot the Difference</h2>
+<p>Look at the slots. A <strong>15 amp outlet</strong> has two vertical slots and a roundish ground hole below them. A <strong>20 amp outlet</strong> looks the same at first glance — but one of the vertical slots also has a horizontal line branching off it, forming a sideways "T". That little T is the giveaway: it is shaped to accept a 20 amp plug, which has one horizontal prong.</p>
+<h2>Where 15 Amp Outlets Belong</h2>
+<ul>
+  <li>Standard household items: TVs, lamps, toasters, vacuums and computers</li>
+  <li>They must be on a 15 amp circuit — or on a 20 amp circuit that has multiple receptacles</li>
+  <li>They accept 15 amp plugs only</li>
+  <li>Never install one as the only outlet on a 20 amp circuit</li>
+</ul>
+<h2>Where 20 Amp Outlets Belong</h2>
+<ul>
+  <li>High-powered items: sump pumps, large refrigerators, window air conditioners and shop tools</li>
+  <li>They must be on a 20 amp circuit</li>
+  <li>Required when the circuit has only one receptacle</li>
+  <li>They accept both 15 amp and 20 amp plugs</li>
+  <li>Never install one on a 15 amp circuit — the outlet would promise power the wiring cannot safely deliver</li>
+</ul>
+<h2>Why This Comes Up in Almost Every Remodel</h2>
+<p>Kitchens and bathrooms are the rooms we remodel most, and they are exactly where outlet ratings matter. Modern kitchen countertop circuits are 20 amp circuits, because kettles, air fryers and espresso machines draw real power. When we open up a kitchen or bathroom during a <a href="/services/kitchen-remodeling/">kitchen remodel</a> or a <a href="/services/bathroom-remodeling/">bathroom remodel</a>, checking the circuits and outlets is part of the job — it is far cheaper to correct while the walls are open than after the tile is set.</p>
+<p>Not sure what is behind your walls? That is what the first visit is for. <a href="/request-service.html">Request a free design preview</a> and we will walk the space with you, answer questions like these in plain language, and put one written price in front of you before any work starts.</p>"""
+    },
+    {
+        "slug": "how-a-bathroom-remodel-works",
+        "title": "How a Bathroom Remodel Actually Works, Step by Step",
+        "desc": "Design, demolition, plumbing, waterproofing, tile and finishing — the real order of a bathroom remodel, what happens at each stage, and how long it takes on Long Island.",
+        "body": f"""
+<p>Most homeowners know what they want their new bathroom to look like. What they don't know — and what causes most of the stress — is what actually happens between the first visit and the final walkthrough. Here is the order we work in at {NAME}, and why the order matters.</p>
+<h2>Step 1: Design and Materials Come First</h2>
+<p>Before anything is demolished, the design is settled and the materials are chosen: tile, vanity, fixtures, glass. This is not paperwork — tile and fixtures can take weeks to arrive, and ordering them first is the difference between a remodel that flows and one that stalls halfway. At this stage you also get your design preview and one written price for the whole project.</p>
+<h2>Step 2: Demolition</h2>
+<p>The old bathroom comes out — fixtures, tile, vanity, and down to the studs where the room needs it. Demo is fast, usually a day or two, and it is the moment hidden problems show themselves: old water damage, tired plumbing, wiring that was never right. Better to find them now than after the new tile is up.</p>
+<h2>Step 3: Plumbing and Electrical Rough-In</h2>
+<p>With the walls open, the plumber and electrician set everything that will live behind them: shower valves, drains, supply lines, lighting and exhaust. If the layout is changing — a tub becoming a <a href="/services/bathroom-remodeling/">walk-in shower</a>, a vanity moving across the room — this is when it happens.</p>
+<h2>Step 4: Waterproofing</h2>
+<p>The step nobody sees and everybody depends on. The shower and wet areas are waterproofed before a single tile is set. Skipping or rushing this stage is how new bathrooms end up leaking into the floor below within a few years.</p>
+<h2>Step 5: Tile, Then Fixtures</h2>
+<p>Floor and wall tile go in, then the room starts looking like a bathroom again: vanity, mirror, toilet, lighting, and the shower glass or door. This is the longest visible stretch of the project, and the stage where craftsmanship shows.</p>
+<h2>Step 6: Finishing and Walkthrough</h2>
+<p>Paint, trim, hardware, a full clean — and then we walk the room with you, item by item, before the job is called done.</p>
+<h2>How Long Does It All Take?</h2>
+<p>A full bathroom remodel usually takes <strong>3 to 5 weeks</strong> once work starts. The biggest variables are the size of the room, whether the layout changes, and how early the materials were ordered — which is why step 1 happens before anyone picks up a hammer.</p>
+<p>Thinking about your own bathroom? Start with a <a href="/request-service.html">free design preview</a>: we come to your home, measure the room, talk through what you want, and give you one written price before any work begins.</p>"""
+    },
+    {
+        "slug": "signs-your-roof-needs-replacing",
+        "title": "Signs Your Roof Needs Replacing — and Why Waiting Costs More",
+        "desc": "Curling shingles, leaks and granules in the gutters are warnings, not quirks. The signs a roof is at the end of its life — and why the roof you replace too late costs the most.",
+        "body": """
+<p>There is an old line in our business: the most expensive roof is the one you waited too long to replace. A roof rarely fails all at once. It warns you first — quietly, for a season or two — and the cost of the job depends mostly on whether you act on the warnings or on the leak.</p>
+<h2>Signs Your Roof Is at the End of Its Life</h2>
+<ul>
+  <li><strong>Age.</strong> Most asphalt shingle roofs last 20 to 25 years. If yours is in that range, it is on borrowed time even if it looks fine from the street.</li>
+  <li><strong>Curling, cracked or missing shingles.</strong> Shingles that curl at the edges or blow off in every storm have lost their ability to shed water.</li>
+  <li><strong>Granules in the gutters.</strong> Those sand-like grains are the shingles' protective surface. When they wash off in quantity, the shingles are wearing out.</li>
+  <li><strong>Stains and leaks inside.</strong> Water spots on ceilings or walls mean water is already getting past the roof — the visible stain is the last stop, not the first.</li>
+  <li><strong>A sagging roofline.</strong> A dip or sag can mean the decking underneath is soft from moisture. That is no longer just a roofing question.</li>
+  <li><strong>Daylight in the attic.</strong> If you can see light through the roof boards, water has a way in too.</li>
+</ul>
+<h2>Why Waiting Costs More</h2>
+<p>A roof replacement is a defined job. A roof replacement plus rotted decking, soaked insulation, mold remediation and a repaired ceiling is a much bigger one. Water that gets under tired shingles does not stay in one place — it travels, and it damages structure, wiring and finishes on the way. Replacing a roof on time is really about protecting everything underneath it: your home's structure, its energy efficiency, and the rooms you have already invested in.</p>
+<h2>Planning an Addition or Renovation? Check the Roof First</h2>
+<p>This is the conversation we have most often. A homeowner planning a <a href="/services/home-additions/">second-story addition</a>, a <a href="/services/dormer-construction/">dormer</a> or a <a href="/services/full-home-renovation/">full home renovation</a> is about to build on top of the existing roof. If that roof has only a few good years left, the plan should account for it — building new work over a failing roof means paying to open the same areas twice.</p>
+<p>If you are planning a project and are not sure about your roof, ask us to look while we are there. The first visit is free: <a href="/request-service.html">request a free design preview</a> and we will give you an honest read — and one written price — before any work starts.</p>"""
+    },
+]
+
+
 def make_blog_pages():
-    posts = [
-        {
-            "slug": "landscaping-zones",
-            "title": "What Landscaping Zone Are You in — and Why Does It Matter?",
-            "desc": "Learn about USDA hardiness zones and how to choose plants that thrive on Long Island. Tips from Green Empire Landscaping in Hempstead, NY.",
-            "body": f"""
-<p>If your plants keep dying or struggling through Long Island winters, hardiness zones might be the answer. Long Island falls primarily in <strong>USDA Zone 7a–7b</strong> — which means cold winters (as low as 0–10°F) and warm, humid summers. Knowing your zone changes what you plant and when you plant it.</p>
-<h2>What Zone Is Long Island?</h2>
-<p>Most of Nassau and Suffolk Counties fall in Zone 7a or 7b. The North Shore tends to be slightly cooler; the South Shore and coastal areas are a bit warmer. This matters for anything you're keeping year-round — trees, shrubs, perennials, and ornamental grasses all have zone requirements.</p>
-<h2>Best Plants for Long Island Landscapes</h2>
-<ul>
-  <li><strong>Ornamental grasses</strong> — drought-tolerant and low-maintenance in Zone 7</li>
-  <li><strong>Knockout roses</strong> — disease-resistant and reliable in this climate</li>
-  <li><strong>Boxwood</strong> — classic hedge material that handles Long Island winters well</li>
-  <li><strong>Japanese maples</strong> — thrive in Zone 7, stunning fall color</li>
-  <li><strong>Blue Star juniper</strong> — evergreen, low-maintenance, great for borders</li>
-</ul>
-<h2>What Our Team Recommends</h2>
-<p>At {NAME}, every landscape design starts with a site visit where we assess your soil, sun exposure, drainage, and existing plantings. We only recommend plants we know will thrive on Long Island — not whatever looks good at a nursery in the moment.</p>
-<p>Want a plant selection that will actually last? <a href="/request-service.html">Request a free consultation</a> and we'll walk your property and give you honest recommendations.</p>"""
-        },
-        {
-            "slug": "outdoor-landscaping-ideas",
-            "title": "Outdoor Landscaping Ideas for Every Budget",
-            "desc": "Creative outdoor renovation ideas for Long Island homeowners — from patio builds to full landscape transformations. Tips from Green Empire Landscaping.",
-            "body": f"""
-<p>You don't need to spend a fortune to dramatically improve your outdoor space. Here are ideas across every budget range — from simple weekend projects to full outdoor renovations.</p>
-<h2>Under $2,000 — Quick Impact</h2>
-<ul>
-  <li><strong>Define your garden beds</strong> — fresh mulch and clean edge lines transform the look of any yard instantly</li>
-  <li><strong>Add a focal point</strong> — a single ornamental tree, a decorative boulder, or a simple planting cluster draws the eye and anchors the space</li>
-  <li><strong>Upgrade your walkway edging</strong> — simple steel or stone edging along a path adds structure without major cost</li>
-</ul>
-<h2>$2,000–$10,000 — Real Transformation</h2>
-<ul>
-  <li><strong>Paver patio</strong> — a modest 200–300 sq ft patio adds usable outdoor living space and significant property value</li>
-  <li><strong>Front yard redesign</strong> — new plantings, bed design, and lawn restoration can completely change your curb appeal</li>
-  <li><strong>Privacy plantings</strong> — a row of arborvitae or holly creates a natural privacy screen that improves with age</li>
-</ul>
-<h2>$10,000+ — Full Outdoor Renovation</h2>
-<ul>
-  <li><strong>Complete back yard overhaul</strong> — patio, garden beds, lawn restoration, and plantings as a cohesive design</li>
-  <li><strong>Outdoor living environment</strong> — pergola, fire feature, outdoor kitchen, and entertaining space</li>
-  <li><strong>Paver driveway</strong> — one of the highest ROI upgrades for Long Island homes</li>
-</ul>
-<p>Not sure what fits your budget and property? {NAME} offers free on-site consultations where we can help you prioritize and plan. <a href="/request-service.html">Book yours today.</a></p>"""
-        },
-        {
-            "slug": "spring-lawn-tuneup",
-            "title": "Why You Should Schedule a Spring Tune-Up for Your Landscape",
-            "desc": "Spring is the best time to set your Long Island landscape up for the season. Here's what a professional spring tune-up includes and why it matters.",
-            "body": f"""
-<p>Winter on Long Island is tough on landscapes. Frost heaving, salt spray from roads, compacted soil, and dormant damage all add up. A professional spring tune-up addresses all of it before the growing season starts — and the difference shows all year.</p>
-<h2>What a Spring Landscape Tune-Up Includes</h2>
-<ul>
-  <li><strong>Cleanup</strong> — removal of winter debris, dead material, and fallen branches</li>
-  <li><strong>Bed edging and reshaping</strong> — clean lines define the space and prepare beds for new growth</li>
-  <li><strong>Mulch application</strong> — fresh mulch retains moisture, suppresses weeds, and gives beds a finished look</li>
-  <li><strong>Pruning</strong> — late-winter pruning of ornamentals and shrubs promotes healthy growth and shape</li>
-  <li><strong>Lawn assessment</strong> — identify bare or damaged spots early and address them before summer heat sets in</li>
-</ul>
-<h2>Why Timing Matters</h2>
-<p>The window for effective spring prep on Long Island is roughly <strong>late March through early May</strong>. Too early and the ground is still frozen; too late and fast-growing weeds get ahead of you. Getting on the schedule early means your property looks great from the first warm weekend.</p>
-<h2>Book Before the Rush</h2>
-<p>Spring is our busiest season. If you want to get on the schedule, reach out in late winter — spots fill up fast. <a href="/request-service.html">Request a free estimate</a> and we'll assess your property and put together a spring plan.</p>"""
-        }
-    ]
-    for post in posts:
-        bc, bc_schema = breadcrumbs([("Home", "/"), ("Resources", None), (post["title"][:40] + "…", None)])
+    cards = "\n".join(f"""
+    <div class="blog-card">
+      <h3><a href="/blog/{p['slug']}/">{p['title']}</a></h3>
+      <p>{p['desc']}</p>
+      <a href="/blog/{p['slug']}/" class="read-more">Read the article →</a>
+    </div>""" for p in ARTICLES)
+    bc, bc_schema = breadcrumbs([("Home", "/"), ("Articles", None)])
+    index = f"""{head(
+        f"Articles & Guides | {NAME}",
+        f"Remodeling know-how from {NAME}: practical, plain-language guides for Long Island homeowners — outlets, bathrooms, roofs and planning a project.",
+        "/blog/",
+        bc_schema
+    )}
+{nav(active="blog")}
+{bc}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">From the Green Empire Builders team</p>
+    <h1>Articles &amp; Guides</h1>
+    <p>Practical answers to the questions Long Island homeowners ask us — the same topics we share on Instagram and Facebook, in full, readable form.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="blog-grid">{cards}</div>
+  </div>
+</section>
+<section class="cta-banner">
+  <div class="container">
+    <h2>Have a Project in Mind?</h2>
+    <p>Free, no obligation. We call you back the same business day, 8am to 6pm.</p>
+    <div class="cta-actions">
+      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get My Free Design Preview</a>
+      <a href="tel:{PHONE_RAW}" class="btn btn-outline-white btn-lg">Call {PHONE}</a>
+    </div>
+  </div>
+</section>
+{footer()}
+</body></html>"""
+    write("blog/index.html", index)
+
+    for post in ARTICLES:
+        bc, bc_schema = breadcrumbs([("Home", "/"), ("Articles", "/blog/"), (post["title"][:40] + "…", None)])
         content = f"""{head(
             f"{post['title']} | {NAME}",
             post["desc"],
             f"/blog/{post['slug']}/",
             bc_schema
         )}
-{nav()}{bc}
+{nav(active="blog")}{bc}
 <section class="page-hero">
   <div class="container">
     <h1>{post['title']}</h1>
@@ -1617,23 +1671,13 @@ def make_blog_pages():
     <article class="blog-post-body">
       {post['body']}
       <div class="blog-post-cta">
-        <h3>Ready to Transform Your Outdoor Space?</h3>
-        <p>{NAME} serves all of Long Island — Nassau &amp; Suffolk Counties. Free estimates, no obligation.</p>
-        <a href="/request-service.html" class="btn btn-primary">Get a Free Estimate</a>
+        <h3>Planning a Project Like This?</h3>
+        <p>{NAME} serves all of Long Island — Nassau &amp; Suffolk Counties. Start with a free custom design preview and one written quote before any work begins.</p>
+        <a href="/request-service.html" class="btn btn-primary">Get My Free Design Preview</a>
       </div>
     </article>
     <aside class="blog-post-sidebar">
-      <div class="booking-card">
-        <div class="booking-card-header">
-          <h3>Free Estimate</h3>
-          <p>Response within 1 business hour</p>
-        </div>
-        <div style="padding:20px">
-          <p style="font-size:.9rem;color:var(--gray-dark);margin-bottom:16px">Ready to get started? Call or text us and we'll schedule a free on-site consultation.</p>
-          <a href="tel:{PHONE_RAW}" class="btn btn-primary btn-block">Call {PHONE}</a>
-          <a href="/request-service.html" class="btn btn-outline btn-block" style="margin-top:10px">Request Online</a>
-        </div>
-      </div>
+      {booking_form(compact=True)}
       <div class="sidebar-services">
         <h4>Our Services</h4>
         <ul>{"".join(f'<li><a href="/services/{s["slug"]}/">{s["name"]}</a></li>' for s in SERVICES)}</ul>
@@ -1679,6 +1723,8 @@ def make_sitemap():
     urls += [("/service-areas/", "0.7", "monthly")]
     urls += [("/about/", "0.6", "monthly"), ("/faq/", "0.7", "monthly"),
              ("/reviews/", "0.6", "monthly"), ("/request-service.html", "0.8", "monthly")]
+    urls += [("/blog/", "0.7", "weekly")]
+    urls += [(f"/blog/{p['slug']}/", "0.6", "monthly") for p in ARTICLES]
     items = "\n".join(f"""  <url>
     <loc>https://{B['domain']}{u}</loc>
     <lastmod>{today}</lastmod>
@@ -1717,6 +1763,7 @@ for a in AREAS:
 make_about()
 make_faq()
 make_reviews()
+make_blog_pages()
 make_request_service()
 make_thank_you()
 make_legal()
