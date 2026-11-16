@@ -566,3 +566,17 @@ a.card-link:hover { color: var(--accent); }
 .filled-star{width:16px;height:16px;flex:none}
 .review-stars .filled-star{width:18px;height:18px;color:var(--accent,#F2B705)}
 @media(max-width:700px){.city-services{grid-template-columns:1fr}}
+
+/* ── Social side bar + articles index (Nov 2026) ── */
+.social-side{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:900;display:flex;flex-direction:column;align-items:center;gap:.65rem;background:#141414;border:1px solid rgba(242,183,5,.45);border-right:none;border-radius:12px 0 0 12px;padding:.9rem .55rem;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.social-side-label{writing-mode:vertical-rl;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#F2B705;font-weight:700}
+.social-side a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(242,183,5,.12);color:#F2B705;transition:background .2s,color .2s}
+.social-side a:hover{background:#F2B705;color:#141414}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.blog-card{border:1px solid rgba(0,0,0,.12);border-top:3px solid var(--accent,#F2B705);border-radius:10px;padding:1.4rem;background:#fff;color:#1a1a1a}
+.blog-card h3{margin:.1rem 0 .6rem;font-size:1.2rem;line-height:1.35}
+.blog-card h3 a{color:inherit;text-decoration:none}
+.blog-card h3 a:hover{color:#b8860b}
+.blog-card p{line-height:1.65;margin:0 0 1rem}
+.blog-card .read-more{font-weight:700;color:#b8860b;text-decoration:none}
+@media(max-width:900px){.social-side{display:none}.blog-grid{grid-template-columns:1fr}}
