@@ -674,7 +674,8 @@ def make_homepage():
     for i, src in enumerate(hero_slides):
         alt = hero_alts[i] if i < len(hero_alts) else hero_alts[0]
         extra = ' fetchpriority="high"' if i == 0 else ' loading="lazy"'
-        slide_tags.append(f'<img class="hero-img hero-slide" style="animation-delay:{i * 4}s" src="{src}" alt="{alt}"{extra} />')
+        cls = "hero-photo first" if i == 0 else "hero-photo"
+        slide_tags.append(f'<img class="{cls}" style="animation-delay:{i * 4}s" src="{src}" alt="{alt}"{extra} />')
     slides_html = "\n  ".join(slide_tags)
     service_cards_list = []
     for s in SERVICES:
@@ -912,6 +913,40 @@ def make_homepage():
 # PAGE: Service detail pages
 # ─────────────────────────────────────────────────────────
 
+SERVICE_WORK = {
+    "kitchen-remodeling": [
+        ("/images/drive-work-kitchen1.jpg", "White gloss kitchen remodel with a large island and gold fixtures"),
+        ("/images/drive-gallery-kitchen.jpg", "Kitchen remodel with white cabinetry and a center island"),
+        ("/images/drive-gallery-kitchen2.jpg", "Bright white kitchen remodel with a quartz island"),
+    ],
+    "bathroom-remodeling": [
+        ("/images/drive-hero-bath.jpg", "Bathroom renovation with a double vanity and glass walk-in shower"),
+        ("/images/drive-work-vanity.jpg", "Bathroom vanity renovation with warm wood cabinetry"),
+        ("/images/drive-work-bath2.jpg", "Updated bathroom with new fixtures and vanity"),
+    ],
+    "home-additions": [
+        ("/images/drive-about-house.jpg", "Home addition with floor-to-ceiling glass walls"),
+        ("/images/drive-gallery-living.jpg", "Addition living space opening to the pool and garden"),
+        ("/images/drive-gallery-glass.jpg", "Finished addition space with sliding glass doors"),
+    ],
+    "dormer-construction": [
+        ("/images/drive-work-dormer.jpg", "Dormer addition on a Long Island home"),
+    ],
+    "basement-finishing": [
+        ("/images/drive-gallery-glass.jpg", "Finished basement living space with garden access"),
+        ("/images/drive-work-base.jpg", "Finished basement stairwell and living area"),
+    ],
+    "full-home-renovation": [
+        ("/images/drive-hero-kitchen.jpg", "Full home renovation — kitchen with white gloss cabinetry"),
+        ("/images/drive-hero-bath.jpg", "Full home renovation — bathroom with double vanity"),
+        ("/images/drive-hero-living.jpg", "Full home renovation — open-plan living and dining space"),
+    ],
+    "custom-home-building": [
+        ("/images/drive-about-house.jpg", "Custom home with a modern glass exterior"),
+        ("/images/drive-work-dormer.jpg", "Custom-built Long Island home with dormers"),
+    ],
+}
+
 def make_service_page(s):
     bc, bc_schema = breadcrumbs([("Home", "/"), ("Services", "/services/"), (s["name"], None)])
     benefits = "\n".join(f"<li>{b}</li>" for b in [s["lead"]] + BENEFIT_TAIL)
@@ -923,6 +958,16 @@ def make_service_page(s):
         f'<div class="step-card"><div class="step-number">{i}</div><h3 class="step-title">{t}</h3><p class="step-desc">{d}</p></div>'
         for i, (t, d) in enumerate(PROCESS_STEPS, 1)
     )
+    work_photos = SERVICE_WORK.get(s["slug"], [])
+    work_html = ""
+    if work_photos:
+        imgs = "\n".join(f'        <img src="{src}" alt="{alt}" loading="lazy" />' for src, alt in work_photos)
+        work_html = f'''      <h2>Our Work — Recent {s['name']} Projects</h2>
+      <p>Real projects by our own crews — the standard your home gets too.</p>
+      <div class="work-grid">
+{imgs}
+      </div>
+'''
     faq_items = service_faq_items(s)
     faq_schema = service_faq_schema(s)
     svc_img = s.get("image", "")
@@ -983,7 +1028,7 @@ def make_service_page(s):
         <p>{s['priceFactors']}</p>
         {reviews_badge()}
       </div>
-      <h2>Before you call</h2>
+{work_html}      <h2>Before you call</h2>
       <div class="faq-list">
         {faq_items}
       </div>
@@ -1551,6 +1596,8 @@ def make_thank_you():
 ARTICLES = [
     {
         "slug": "15-amp-vs-20-amp-outlets",
+        "img": "/images/drive-article-outlets.jpg",
+        "imgAlt": "Kitchen sink plumbing and lighting work by Green Empire Builders",
         "title": "15 Amp vs. 20 Amp Outlets: What's the Difference?",
         "desc": "15 amp and 20 amp outlets look almost the same, but they are not interchangeable. How to tell them apart, where each one belongs, and the mistakes that cause trouble — from the Green Empire Builders team.",
         "body": """
@@ -1578,6 +1625,8 @@ ARTICLES = [
     },
     {
         "slug": "how-a-bathroom-remodel-works",
+        "img": "/images/drive-hero-bath.jpg",
+        "imgAlt": "Bathroom remodel with a double vanity and glass walk-in shower by Green Empire Builders",
         "title": "How a Bathroom Remodel Actually Works, Step by Step",
         "desc": "Design, demolition, plumbing, waterproofing, tile and finishing — the real order of a bathroom remodel, what happens at each stage, and how long it takes on Long Island.",
         "body": f"""
@@ -1600,6 +1649,8 @@ ARTICLES = [
     },
     {
         "slug": "signs-your-roof-needs-replacing",
+        "img": "/images/drive-article-roof.jpg",
+        "imgAlt": "A finished architectural shingle roof by Green Empire Builders",
         "title": "Signs Your Roof Needs Replacing — and Why Waiting Costs More",
         "desc": "Curling shingles, leaks and granules in the gutters are warnings, not quirks. The signs a roof is at the end of its life — and why the roof you replace too late costs the most.",
         "body": """
@@ -1625,6 +1676,7 @@ ARTICLES = [
 def make_blog_pages():
     cards = "\n".join(f"""
     <div class="blog-card">
+      <a href="/blog/{p['slug']}/"><img class="blog-card-img" src="{p['img']}" alt="{p['imgAlt']}" loading="lazy" /></a>
       <h3><a href="/blog/{p['slug']}/">{p['title']}</a></h3>
       <p>{p['desc']}</p>
       <a href="/blog/{p['slug']}/" class="read-more">Read the article →</a>
@@ -1681,6 +1733,7 @@ def make_blog_pages():
 <section class="section">
   <div class="container blog-post-layout">
     <article class="blog-post-body">
+      <img class="article-hero-img" src="{post['img']}" alt="{post['imgAlt']}" />
       {post['body']}
       <div class="blog-post-cta">
         <h3>Planning a Project Like This?</h3>
