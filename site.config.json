@@ -32,9 +32,9 @@
     "industry": "Construction & Renovation",
     "industryLower": "construction & renovation",
     "heroSlides": [
-      "/images/hero-bg.jpg",
-      "/images/hero-slides/slide-2.jpg",
-      "/images/hero-slides/slide-3.jpg"
+      "/images/drive-hero-kitchen.jpg",
+      "/images/drive-hero-bath.jpg",
+      "/images/drive-hero-living.jpg"
     ]
   },
   "services": [
@@ -1171,34 +1171,34 @@
   ],
   "gallery": [
     {
-      "src": "/images/gallery/second-story-addition.jpg",
-      "alt": "Second story home addition on Long Island",
-      "label": "Second Story Addition"
-    },
-    {
-      "src": "/images/gallery/kitchen-remodel.jpg",
-      "alt": "Custom kitchen remodel with white cabinetry",
+      "src": "/images/drive-gallery-kitchen.jpg",
+      "alt": "Kitchen remodel with white cabinetry and a center island",
       "label": "Kitchen Remodel"
     },
     {
-      "src": "/images/gallery/bathroom-renovation.jpg",
-      "alt": "Master bathroom renovation with walk-in shower",
+      "src": "/images/drive-hero-bath.jpg",
+      "alt": "Bathroom renovation with double vanity and glass walk-in shower",
       "label": "Bathroom Renovation"
     },
     {
-      "src": "/images/gallery/dormer-addition.jpg",
-      "alt": "Dormer addition expanding attic space on Long Island home",
-      "label": "Dormer Addition"
-    },
-    {
-      "src": "/images/gallery/basement-finish.jpg",
-      "alt": "Finished basement converted to modern living space",
-      "label": "Basement Finish"
-    },
-    {
-      "src": "/images/gallery/full-home-renovation.jpg",
-      "alt": "Full home renovation complete interior rebuild",
+      "src": "/images/drive-gallery-living.jpg",
+      "alt": "Open living space with floor-to-ceiling glass and pool view",
       "label": "Full Home Renovation"
+    },
+    {
+      "src": "/images/drive-gallery-glass.jpg",
+      "alt": "Finished living space with sliding glass doors to the garden",
+      "label": "Finished Living Space"
+    },
+    {
+      "src": "/images/drive-gallery-roof.jpg",
+      "alt": "New architectural shingle roof installed by Green Empire Builders",
+      "label": "Roof Replacement"
+    },
+    {
+      "src": "/images/drive-gallery-kitchen2.jpg",
+      "alt": "Bright white kitchen remodel with quartz island",
+      "label": "Custom Kitchen"
     }
   ],
   "videos": [

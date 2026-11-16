@@ -318,7 +318,7 @@ def head(title, desc, canonical, schema="", extra=""):
   <meta property="og:description" content="{desc}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://{B['domain']}{canonical}" />
-  <meta property="og:image" content="/images/hero-bg.jpg" />
+  <meta property="og:image" content="/images/drive-hero-kitchen.jpg" />
   <meta name="robots" content="index, follow" />
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/images/logo.png" />
@@ -666,9 +666,9 @@ def make_homepage():
     hero_slides = B.get('heroSlides', ['/images/hero-bg.jpg'])
     hero_img = hero_slides[0]
     hero_alts = [
-        f"Finished custom home exterior at dusk, built by {NAME} on Long Island",
-        f"Open-plan kitchen and living room remodel by {NAME} on Long Island",
-        f"Two-story great room with a stone fireplace, built by {NAME} on Long Island",
+        "Custom kitchen remodel with white gloss cabinetry, gold fixtures and a large island",
+        "Bathroom renovation with a double vanity, patterned tile floor and glass walk-in shower",
+        "Open-plan living and dining space with a custom wine wall",
     ]
     slide_tags = []
     for i, src in enumerate(hero_slides):
@@ -1266,7 +1266,7 @@ def make_about():
 <section class="section">
   <div class="container">
     <div class="split-section">
-      <div class="split-img"><img src="/images/team.jpg" alt="{NAME} team — locally owned and operated in {B['city']}, NY" width="1200" height="1600" /></div>
+      <div class="split-img"><img src="/images/drive-about-house.jpg" alt="A Long Island home renovated by {NAME} — modern glass exterior" width="1070" height="1600" /></div>
       <div class="split-content">
         <span class="eyebrow">Who We Are</span>
         <h2>Built for Long Island</h2>
