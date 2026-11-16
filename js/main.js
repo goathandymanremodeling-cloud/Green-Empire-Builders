@@ -106,6 +106,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Video walkthroughs: click-to-play (no preload) ─────
+  // Videos carry no src until the visitor presses play, so
+  // no video bytes are downloaded on page load.
+  document.querySelectorAll('.video-card').forEach(card => {
+    const video = card.querySelector('video');
+    const btn = card.querySelector('.video-play');
+    if (!video || !btn) return;
+    const loadAndPlay = () => {
+      if (!video.getAttribute('src')) {
+        video.setAttribute('src', video.dataset.src);
+        video.load();
+      }
+      video.controls = true;
+      btn.classList.add('hidden');
+      video.play().catch(() => { btn.classList.remove('hidden'); });
+    };
+    btn.addEventListener('click', loadAndPlay);
+    video.addEventListener('click', () => { if (!video.getAttribute('src')) loadAndPlay(); });
+  });
+
   // ── Footer year ────────────────────────────────────────
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
