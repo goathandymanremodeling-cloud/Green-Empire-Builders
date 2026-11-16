@@ -24,7 +24,6 @@ NAME = B["name"]
 ADDRESS = f"{B['address']}, {B['city']}, {B['state']} {B['zip']}"
 PRIMARY = B["primaryColor"]
 SECONDARY = B["secondaryColor"]
-WEBHOOK = B["zapierWebhook"]
 FONT    = B.get("font", "Inter")
 FONT_URL = B.get('fontUrl', 'https://fonts.googleapis.com/css2?family=' + FONT.replace(' ', '+') + ':wght@400;500;600;700;800&display=swap')
 
@@ -340,15 +339,14 @@ def booking_form(compact=False):
     <h3>Get Your Custom Quote</h3>
     <p>Response within 1 business hour</p>
   </div>
-  <form action="{WEBHOOK}" method="POST" class="booking-form" data-phone="{PHONE}">
+  <form name="quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" class="booking-form" data-phone="{PHONE}">
     <div class="form-group"><label for="c-name">Name *</label><input type="text" id="c-name" name="name" required placeholder="Your full name" /></div>
     <div class="form-group"><label for="c-phone">Phone *</label><input type="tel" id="c-phone" name="phone" required placeholder="{PHONE}" /></div>
     <div class="form-group"><label for="c-service">Service</label>
       <select id="c-service" name="service"><option value="">Select a service...</option>{service_opts}</select>
     </div>
     <div class="form-group"><label for="c-message">Details</label><textarea id="c-message" name="message" rows="3" placeholder="Tell us about your project..."></textarea></div>
-    <input type="text" name="_gotcha" style="display:none" />
-    <input type="hidden" name="_next" value="/thank-you.html" />
+    <input type="text" name="bot-field" style="display:none" />
     <button type="submit" class="btn btn-primary btn-block">Send Request →</button>
   </form>
 </div>"""
@@ -358,7 +356,7 @@ def booking_form(compact=False):
     <h3>Request a Free Estimate</h3>
     <p>We respond within 1 business hour</p>
   </div>
-  <form action="{WEBHOOK}" method="POST" class="booking-form" data-phone="{PHONE}">
+  <form name="estimate-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" class="booking-form" data-phone="{PHONE}">
     <div class="form-row">
       <div class="form-group"><label for="f-first-name">First Name *</label><input type="text" id="f-first-name" name="first_name" required placeholder="John" /></div>
       <div class="form-group"><label for="f-last-name">Last Name *</label><input type="text" id="f-last-name" name="last_name" required placeholder="Smith" /></div>
@@ -372,10 +370,7 @@ def booking_form(compact=False):
       <select id="f-service" name="service" required><option value="">Select a service...</option>{service_opts}<option value="other">Other / Not Sure</option></select>
     </div>
     <div class="form-group"><label for="f-message">Project Details</label><textarea id="f-message" name="message" rows="4" placeholder="Describe your project, property size, timeline..."></textarea></div>
-    <input type="text" name="_gotcha" style="display:none" />
-    <input type="hidden" name="_subject" value="New Estimate Request — {NAME}" />
-    <input type="hidden" name="_next" value="/thank-you.html" />
-    <button type="submit" class="btn btn-primary btn-block">Send My Request →</button>
+    <input type="text" name="bot-field" style="display:none" />
     <p class="form-disclaimer">We respect your privacy. No spam, ever.</p>
   </form>
 </div>"""
