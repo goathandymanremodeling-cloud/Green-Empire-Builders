@@ -345,7 +345,7 @@ def reviews_badge():
 BENEFIT_TAIL = [
     "Free custom design preview",
     "Written quote before any work starts",
-    "Priced by the project, not by the hour",
+    "One dedicated team, start to finish",
     "Family-owned, Long Island based",
     "Workmanship warranty",
 ]
@@ -965,7 +965,7 @@ def make_service_page(s):
         <h3>Your quote — {NAME}</h3>
         <ul class="check-list">
           <li>Free custom design preview</li>
-          <li>Priced by the project, not by the hour</li>
+          <li>One dedicated team, start to finish</li>
           <li>Written quote before any work starts</li>
         </ul>
         <p>{s['priceFactors']}</p>
