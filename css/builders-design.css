@@ -588,3 +588,22 @@ a.card-link:hover { color: var(--accent); }
 .hero-overlay{background:linear-gradient(90deg,rgba(8,10,8,.8) 0%,rgba(8,10,8,.52) 48%,rgba(8,10,8,.16) 100%),linear-gradient(to top,rgba(8,10,8,.5),rgba(8,10,8,0) 45%)}
 .hero h1,.hero-brand-name,#hero-p{text-shadow:0 2px 18px rgba(0,0,0,.65)}
 @media (prefers-reduced-motion: reduce){.hero-slide{animation:none}.hero-slide:first-of-type{opacity:.88}}
+
+/* === Bright hero + article/work photos (Nov 16, round 4) === */
+.hero{background:#f5f2ec}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;animation:heroShow 12s linear infinite;z-index:0}
+.hero-photo.first{opacity:1}
+@keyframes heroShow{0%{opacity:0}4%{opacity:1}30%{opacity:1}37%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.hero-photo{animation:none}}
+.hero-overlay{background:linear-gradient(90deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.12) 50%,rgba(255,255,255,0) 78%);z-index:1}
+.hero-content{position:relative;z-index:2;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:22px;padding:42px 44px;box-shadow:0 24px 60px rgba(20,30,20,.20);max-width:650px}
+.hero-content h1{color:#12291a;text-shadow:none}
+.hero-brand-name{color:#1d3a24;text-shadow:none}
+#hero-p{color:#3c4a3f;text-shadow:none}
+.hero-actions .btn-outline-white{color:#14532d;border-color:#14532d;background:rgba(255,255,255,.55)}
+.hero-trust span{background:#17301f;color:#fff}
+.blog-card-img{width:100%;height:190px;object-fit:cover;border-radius:12px;margin-bottom:14px;display:block}
+.article-hero-img{width:100%;max-height:440px;object-fit:cover;border-radius:16px;margin-bottom:26px;display:block}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:10px 0 34px}
+.work-grid img{width:100%;height:230px;object-fit:cover;border-radius:14px;display:block}
+@media (max-width:800px){.work-grid{grid-template-columns:1fr 1fr}.hero-content{padding:30px 24px}}
