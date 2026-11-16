@@ -1103,11 +1103,25 @@
   ],
   "reviews": [
     {
+      "name": "Gildardo Acuahuitl",
+      "location": "Long Island, NY",
+      "date": "2026-06-01",
+      "rating": 5,
+      "text": "Green Empire Builders did an outstanding job on my kitchen renovation. From the initial consultation to the final walkthrough, their team was professional, knowledgeable, and attentive to every detail. They listened to my ideas, offered helpful suggestions, and delivered exactly what they promised. My new kitchen looks beautiful and modern. I have received many compliments from family and friends. Thank you for transforming my kitchen into a space that I truly love!"
+    },
+    {
       "name": "Koomi Tzaigenblat",
       "location": "Long Island, NY",
       "date": "2026-06-01",
       "rating": 5,
       "text": "They came to my house and renovated the kitchen and living room. The result was great and they were very transparent and honest about the work and pricing. Really happy that I chose them to do the project in my house."
+    },
+    {
+      "name": "Jeremiah Ragsdale",
+      "location": "Long Island, NY",
+      "date": "2026-06-01",
+      "rating": 5,
+      "text": "So glad I went with Green Empire Builders! I will def be calling them for my next project!"
     },
     {
       "name": "Ari",

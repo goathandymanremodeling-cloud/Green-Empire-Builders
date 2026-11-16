@@ -663,7 +663,19 @@ def video_section():
 # ─────────────────────────────────────────────────────────
 
 def make_homepage():
-    hero_img = B.get('heroSlides', ['/images/hero-bg.jpg'])[0]
+    hero_slides = B.get('heroSlides', ['/images/hero-bg.jpg'])
+    hero_img = hero_slides[0]
+    hero_alts = [
+        f"Finished custom home exterior at dusk, built by {NAME} on Long Island",
+        f"Open-plan kitchen and living room remodel by {NAME} on Long Island",
+        f"Two-story great room with a stone fireplace, built by {NAME} on Long Island",
+    ]
+    slide_tags = []
+    for i, src in enumerate(hero_slides):
+        alt = hero_alts[i] if i < len(hero_alts) else hero_alts[0]
+        extra = ' fetchpriority="high"' if i == 0 else ' loading="lazy"'
+        slide_tags.append(f'<img class="hero-img hero-slide" style="animation-delay:{i * 4}s" src="{src}" alt="{alt}"{extra} />')
+    slides_html = "\n  ".join(slide_tags)
     service_cards_list = []
     for s in SERVICES:
         service_cards_list.append(f"""
@@ -694,7 +706,7 @@ def make_homepage():
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <img class="hero-img" src="{hero_img}" alt="Finished custom home exterior at dusk, built by {NAME} on Long Island" fetchpriority="high" />
+  {slides_html}
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
