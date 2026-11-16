@@ -12,7 +12,7 @@
     "hours": "Mon–Sat 8am–7pm",
     "domain": "www.greenempirebuild.com",
     "font": "Inter",
-    "accentColor": "#D4A017",
+    "accentColor": "#F2B705",
     "forms": {
       "notifyEmail": "greenempirebuilders@gmail.com",
       "notifyPhone": "5167121231"
@@ -25,8 +25,8 @@
     "facebook": "https://www.facebook.com/GreenEmpireBuilders/",
     "instagram": "https://www.instagram.com/greenempirebuilders/",
     "googleMapsEmbed": "",
-    "primaryColor": "#1A1A1A",
-    "primaryDark": "#0D0D0D",
+    "primaryColor": "#141414",
+    "primaryDark": "#080808",
     "secondaryColor": "#2C2C2C",
     "secondaryDark": "#1A1A1A",
     "industry": "Construction & Renovation",
@@ -242,5 +242,9 @@
     { "src": "/images/gallery/dormer-addition.jpg", "alt": "Dormer addition expanding attic space on Long Island home", "label": "Dormer Addition" },
     { "src": "/images/gallery/basement-finish.jpg", "alt": "Finished basement converted to modern living space", "label": "Basement Finish" },
     { "src": "/images/gallery/full-home-renovation.jpg", "alt": "Full home renovation complete interior rebuild", "label": "Full Home Renovation" }
+  ],
+  "videos": [
+    { "src": "/videos/bathroom-remodel.mp4", "poster": "/images/video-bathroom-poster.jpg", "label": "Bathroom Remodel", "duration": "0:38" },
+    { "src": "/videos/kitchen-remodel.mp4", "poster": "/images/video-kitchen-poster.jpg", "label": "Kitchen Remodel", "duration": "0:58" }
   ]
 }

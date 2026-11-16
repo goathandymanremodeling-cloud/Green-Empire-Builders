@@ -17,6 +17,7 @@ AREAS = cfg["serviceAreas"]
 REVIEWS = cfg["reviews"]
 FAQS = cfg["faqs"]
 GALLERY = cfg.get("gallery", [])
+VIDEOS = cfg.get("videos", [])
 
 PHONE = B["phone"]
 PHONE_RAW = B["phoneRaw"]
@@ -546,7 +547,45 @@ def work_section():
 </section>"""
 
 
+# ─────────────────────────────────────────────────────────
+# HELPER: Video walkthroughs (click-to-play, no preload)
+# Videos load only when the visitor presses play, so they
+# never slow down the initial page load.
+# ─────────────────────────────────────────────────────────
 
+def video_section():
+    if not VIDEOS:
+        return ""
+    cards = []
+    for v in VIDEOS:
+        cards.append(f"""<figure class="video-card">
+        <div class="video-frame">
+          <video preload="none" poster="{v['poster']}" playsinline data-src="{v['src']}" aria-label="{v['label']} video walkthrough"></video>
+          <button class="video-play" type="button" aria-label="Play {v['label']} video">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+          </button>
+          <span class="video-duration">{v['duration']}</span>
+        </div>
+        <figcaption class="video-caption">
+          <h3>{v['label']}</h3>
+          <p>Video walkthrough of a recently completed project</p>
+        </figcaption>
+      </figure>""")
+    cards_html = "\n      ".join(cards)
+    return f"""
+<!-- VIDEO WALKTHROUGHS -->
+<section class="section video-section" id="project-videos">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Video Walkthroughs</span>
+      <h2>Watch Our Recent Projects</h2>
+      <p>Step inside two of our latest finished projects — real walkthroughs, no staging, no stock footage.</p>
+    </div>
+    <div class="video-grid">
+      {cards_html}
+    </div>
+  </div>
+</section>"""
 
 
 # ─────────────────────────────────────────────────────────
@@ -701,6 +740,8 @@ def make_homepage():
 </section>
 
 {work_section()}
+
+{video_section()}
 
 <!-- BOOK A CONSULTATION -->
 <section class="consultation-section">
@@ -1101,7 +1142,7 @@ def make_about():
 <section class="section">
   <div class="container">
     <div class="split-section">
-      <div class="split-img"><img src="/images/team.jpg" alt="{NAME} team — locally owned and operated in {B['city']}, NY" width="1200" height="800" /></div>
+      <div class="split-img"><img src="/images/team.jpg" alt="{NAME} team — locally owned and operated in {B['city']}, NY" width="1200" height="1600" /></div>
       <div class="split-content">
         <span class="eyebrow">Who We Are</span>
         <h2>Built for Long Island</h2>
