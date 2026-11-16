@@ -580,3 +580,11 @@ a.card-link:hover { color: var(--accent); }
 .blog-card p{line-height:1.65;margin:0 0 1rem}
 .blog-card .read-more{font-weight:700;color:#b8860b;text-decoration:none}
 @media(max-width:900px){.social-side{display:none}.blog-grid{grid-template-columns:1fr}}
+
+/* ── Hero slideshow (3 photos, 4s each) + brightness (Nov 2026) ── */
+.hero-img{opacity:.88}
+.hero-slide{opacity:0;animation:heroFade 12s ease-in-out infinite}
+@keyframes heroFade{0%{opacity:0}4%{opacity:.88}30%{opacity:.88}37%{opacity:0}100%{opacity:0}}
+.hero-overlay{background:linear-gradient(90deg,rgba(8,10,8,.8) 0%,rgba(8,10,8,.52) 48%,rgba(8,10,8,.16) 100%),linear-gradient(to top,rgba(8,10,8,.5),rgba(8,10,8,0) 45%)}
+.hero h1,.hero-brand-name,#hero-p{text-shadow:0 2px 18px rgba(0,0,0,.65)}
+@media (prefers-reduced-motion: reduce){.hero-slide{animation:none}.hero-slide:first-of-type{opacity:.88}}
