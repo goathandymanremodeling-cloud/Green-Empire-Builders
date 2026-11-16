@@ -328,6 +328,64 @@ def head(title, desc, canonical, schema="", extra=""):
 </head>
 <body>"""
 
+def reviews_badge():
+    stars = ICON["star"] * 5
+    return f'<div class="reviews-badge"><span class="rb-stars">{stars}</span><span class="rb-text"><strong>5.0</strong> from 11 Google reviews</span></div>'
+
+BENEFIT_TAIL = [
+    "Free custom design preview",
+    "Written quote before any work starts",
+    "Priced by the project, not by the hour",
+    "Family-owned, Long Island based",
+    "Workmanship warranty",
+]
+
+TRUST_1 = "Green Empire Builders is a family-owned remodeling company based in Massapequa Park, with over 10 years of remodeling experience. We remodel kitchens, bathrooms and basements and build additions across Nassau and Suffolk."
+TRUST_2 = "We work for homeowners, and we come to you: there's no showroom to drive to."
+
+PROCESS_STEPS = [
+    ("Tell us about the project", "Send the form or call. We call you back to set a time that suits you."),
+    ("We come to your home", "We measure, look at what's there now and talk through the design, the materials and your budget."),
+    ("You get a design preview and a written quote", "A preview of your new space, and one price for the project, in writing, before any work starts."),
+    ("One team manages it, start to finish", "We keep you posted while the work is under way."),
+]
+
+def _first_sentence(text):
+    part = text.split(". ")[0].strip()
+    return part if part.endswith(".") else part + "."
+
+def towns_faq_html():
+    links = ", ".join(f'<a href="/service-areas/{a["slug"]}/">{a["name"]}</a>' for a in AREAS)
+    return ("We work across all of Nassau County, and in Suffolk County for kitchens, bathrooms, "
+            f"basements and additions. Some of the towns we cover: {links}. "
+            "Not on the list? Put your ZIP in the form and we'll tell you.")
+
+def towns_faq_text():
+    names = ", ".join(a["name"] for a in AREAS)
+    return ("We work across all of Nassau County, and in Suffolk County for kitchens, bathrooms, "
+            f"basements and additions. Some of the towns we cover: {names}. "
+            "Not on the list? Put your ZIP in the form and we'll tell you.")
+
+def service_faq_items(s):
+    items = []
+    for q, a in s["faqs"]:
+        items.append(f"""
+    <div class="faq-item">
+      <button class="faq-question">{q} <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>{a}</p></div>
+    </div>""")
+    items.append(f"""
+    <div class="faq-item">
+      <button class="faq-question">Do you come out to my town? <span class="faq-icon">+</span></button>
+      <div class="faq-answer"><p>{towns_faq_html()}</p></div>
+    </div>""")
+    return "\n".join(items)
+
+def service_faq_schema(s):
+    faqs = list(s["faqs"]) + [["Do you come out to my town?", towns_faq_text()]]
+    items = json.dumps([{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs])
+    return f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":{items}}}</script>'
+
 def booking_form(compact=False):
     service_opts = "\n".join(
         f'<option value="{s["slug"]}">{s["name"]}</option>'
@@ -337,8 +395,9 @@ def booking_form(compact=False):
         return f"""
 <div class="booking-card">
   <div class="booking-card-header">
-    <h3>Get Your Custom Quote</h3>
-    <p>Response within 1 business hour</p>
+    <h3>Get Your Free Design Preview</h3>
+    {reviews_badge()}
+    <p>Free, no obligation — we call you back the same business day, 8am–6pm.</p>
   </div>
   <form name="quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" class="booking-form" data-phone="{PHONE}">
     <div class="form-group"><label for="c-name">Name *</label><input type="text" id="c-name" name="name" required placeholder="Your full name" /></div>
@@ -348,14 +407,15 @@ def booking_form(compact=False):
     </div>
     <div class="form-group"><label for="c-message">Details</label><textarea id="c-message" name="message" rows="3" placeholder="Tell us about your project..."></textarea></div>
     <input type="text" name="bot-field" style="display:none" />
-    <button type="submit" class="btn btn-primary btn-block">Send Request →</button>
+    <button type="submit" class="btn btn-primary btn-block">Get My Free Design Preview →</button>
   </form>
 </div>"""
     return f"""
 <div class="booking-card">
   <div class="booking-card-header">
-    <h3>Request a Free Estimate</h3>
-    <p>We respond within 1 business hour</p>
+    <h3>Request Your Free Design Preview</h3>
+    {reviews_badge()}
+    <p>Free, no obligation — we call you back the same business day, 8am–6pm.</p>
   </div>
   <form name="estimate-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" class="booking-form" data-phone="{PHONE}">
     <div class="form-row">
@@ -372,7 +432,7 @@ def booking_form(compact=False):
     </div>
     <div class="form-group"><label for="f-message">Project Details</label><textarea id="f-message" name="message" rows="4" placeholder="Describe your project, property size, timeline..."></textarea></div>
     <input type="text" name="bot-field" style="display:none" />
-    <button type="submit" class="btn btn-primary btn-block">Send My Request →</button>
+    <button type="submit" class="btn btn-primary btn-block">Get My Free Design Preview →</button>
     <p class="form-disclaimer">We respect your privacy. No spam, ever.</p>
   </form>
 </div>"""
@@ -832,7 +892,17 @@ def make_homepage():
 
 def make_service_page(s):
     bc, bc_schema = breadcrumbs([("Home", "/"), ("Services", "/services/"), (s["name"], None)])
-    bullets = "\n".join(f"<li>{b}</li>" for b in s["bullets"])
+    benefits = "\n".join(f"<li>{b}</li>" for b in [s["lead"]] + BENEFIT_TAIL)
+    covers = "\n".join(
+        f'<div class="feature-card"><h3>{t}</h3><p>{d}</p></div>'
+        for t, d in s["covers"]
+    )
+    steps = "\n".join(
+        f'<div class="step-card"><div class="step-number">{i}</div><h3 class="step-title">{t}</h3><p class="step-desc">{d}</p></div>'
+        for i, (t, d) in enumerate(PROCESS_STEPS, 1)
+    )
+    faq_items = service_faq_items(s)
+    faq_schema = service_faq_schema(s)
     svc_img = s.get("image", "")
     hero_class = "page-hero page-hero-photo" if svc_img else "page-hero"
     hero_style = f' style="background-image:url(\'{svc_img}\')"' if svc_img else ""
@@ -841,20 +911,24 @@ def make_service_page(s):
         for o in SERVICES if o["slug"] != s["slug"]
     )
     content = f"""{head(
-        f"{s['name']} in {B['city']}, NY | {NAME} | {PHONE}",
-        f"Professional {s['name'].lower()} in {B['city']}, NY and all of Long Island. {NAME} — certified, insured, and locally based. Call {PHONE} for a free estimate.",
+        f"{s['name']} on Long Island, NY | {NAME}",
+        f"{s['tagline']} Free custom design preview and a written quote before any work starts. Call {PHONE}.",
         f"/services/{s['slug']}/",
-        bc_schema
+        bc_schema + faq_schema
     )}
 {nav(active="services")}
 {bc}
 
 <section class="{hero_class}"{hero_style}>
   <div class="container">
-    <h1>{s['name']}</h1>
-    <p>{s['heroText']}</p>
+    <p class="eyebrow">Family-owned remodeling on Long Island</p>
+    <h1>{s['name']} on Long Island</h1>
+    <p>{s['tagline']}</p>
+    <ul class="check-list hero-benefits">
+      {benefits}
+    </ul>
     <div class="hero-actions">
-      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get Free Estimate</a>
+      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get My Free Design Preview</a>
       <a href="tel:{PHONE_RAW}" class="btn btn-outline-white">Call {PHONE}</a>
     </div>
   </div>
@@ -863,17 +937,35 @@ def make_service_page(s):
 <section class="section">
   <div class="container content-sidebar-layout">
     <div class="content-main">
-      <h2>Professional {s['name']} on Long Island</h2>
-      <p>{s['description']} {NAME} has been serving {B['city']} and Long Island for years, delivering reliable results for homeowners and businesses across Nassau and Suffolk Counties.</p>
-      <h3>What's Included</h3>
-      <ul class="check-list">{bullets}</ul>
-      <h3>Why Choose {NAME}?</h3>
-      <p>We're locally owned and operated in {B['city']}, NY — not a national franchise. Every job is handled by our trained crew, and we back every service with a 100% satisfaction guarantee.</p>
-      <div class="cta-inline">
-        <a href="/request-service.html" class="btn btn-primary btn-lg">Get a Free Estimate</a>
-        <a href="tel:{PHONE_RAW}" class="btn btn-outline">Call {PHONE}</a>
+      <h2>Family-owned, Long Island based</h2>
+      <p>{TRUST_1}</p>
+      <p>{TRUST_2}</p>
+      {reviews_badge()}
+      <h2>{s['coversTitle']}</h2>
+      <div class="features-grid covers-grid">
+        {covers}
       </div>
-      <h3>Service Areas</h3>
+      <h2>From first visit to finished room</h2>
+      <div class="steps-grid">
+        {steps}
+      </div>
+      <h2>{s['pricingTitle']}</h2>
+      <p>{s['pricing']}</p>
+      <div class="pricing-card">
+        <h3>Your quote — {NAME}</h3>
+        <ul class="check-list">
+          <li>Free custom design preview</li>
+          <li>Priced by the project, not by the hour</li>
+          <li>Written quote before any work starts</li>
+        </ul>
+        <p>{s['priceFactors']}</p>
+        {reviews_badge()}
+      </div>
+      <h2>Before you call</h2>
+      <div class="faq-list">
+        {faq_items}
+      </div>
+      <h2>{s['name']} across Long Island</h2>
       <p>We provide {s['name'].lower()} throughout Long Island including:</p>
       <div class="city-grid city-grid-sm">
         {service_area_links()}
@@ -907,10 +999,10 @@ def make_service_page(s):
 
 <section class="cta-banner">
   <div class="container">
-    <h2>Need {s['name']} in {B['city']}, NY?</h2>
-    <p>Call or fill out the form above — we respond within 1 business hour with a free estimate.</p>
+    <h2>Get a free custom {s['ctaNoun']} design preview</h2>
+    <p>Free, no obligation. We call you back the same business day, 8am to 6pm.</p>
     <div class="cta-actions">
-      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get Free Estimate</a>
+      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get My Free Design Preview</a>
       <a href="tel:{PHONE_RAW}" class="btn btn-outline-white btn-lg">Call {PHONE}</a>
     </div>
   </div>
@@ -961,9 +1053,9 @@ def make_services_hub():
 <section class="cta-banner">
   <div class="container">
     <h2>Not Sure What You Need?</h2>
-    <p>Call us and describe your property — we'll recommend the right services and give you a free estimate.</p>
+    <p>Call us and describe your property — we'll recommend the right services and give you a free design preview.</p>
     <div class="cta-actions">
-      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get Free Estimate</a>
+      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get My Free Design Preview</a>
       <a href="tel:{PHONE_RAW}" class="btn btn-outline-white btn-lg">Call {PHONE}</a>
     </div>
   </div>
@@ -981,7 +1073,11 @@ def make_city_page(area):
     city = area["name"]
     slug = area["slug"]
     county = area["county"]
-    nearby = ", ".join(f"<strong>{n}</strong>" for n in area["nearbyAreas"])
+    name2slug = {a["name"]: a["slug"] for a in AREAS}
+    nearby = ", ".join(
+        f'<a href="/service-areas/{name2slug[n]}/"><strong>{n}</strong></a>' if n in name2slug else f"<strong>{n}</strong>"
+        for n in area["nearbyAreas"]
+    )
     bc, bc_schema = breadcrumbs([("Home", "/"), ("Service Areas", "/service-areas/"), (city, None)])
 
     city_schema = f"""<script type="application/ld+json">
@@ -994,7 +1090,7 @@ def make_city_page(area):
   </script>"""
 
     service_list = "\n".join(
-        f'<li><a href="/services/{s["slug"]}/">{s["name"]} in {city}</a></li>'
+        f'<li><a href="/services/{s["slug"]}/">{s["name"]} in {city}</a> — {_first_sentence(s["description"])}</li>'
         for s in SERVICES
     )
 
@@ -1010,9 +1106,9 @@ def make_city_page(area):
 <section class="page-hero">
   <div class="container">
     <h1>{B['industry']} in {city}, NY</h1>
-    <p>{NAME} serves {city} and surrounding {county} County homeowners. Call {PHONE} for a free estimate today.</p>
+    <p>{NAME} serves {city} and surrounding {county} County homeowners. Free custom design preview and a written quote before any work starts.</p>
     <div class="hero-actions">
-      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get Free Estimate</a>
+      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get My Free Design Preview</a>
       <a href="tel:{PHONE_RAW}" class="btn btn-outline-white">Call {PHONE}</a>
     </div>
   </div>
@@ -1054,9 +1150,9 @@ def make_city_page(area):
 <section class="cta-banner">
   <div class="container">
     <h2>Need {B['industry']} in {city}, NY?</h2>
-    <p>We're nearby and ready. Call or submit the form — response within 1 business hour.</p>
+    <p>We're nearby and ready. Get a free custom design preview — free, no obligation. We call you back the same business day, 8am to 6pm.</p>
     <div class="cta-actions">
-      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get Free Estimate</a>
+      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get My Free Design Preview</a>
       <a href="tel:{PHONE_RAW}" class="btn btn-outline-white btn-lg">Call {PHONE}</a>
     </div>
   </div>
@@ -1092,7 +1188,7 @@ def make_areas_hub():
 <section class="page-hero">
   <div class="container">
     <h1>Long Island {B['industry']} Service Areas</h1>
-    <p>{NAME} covers Nassau and Suffolk Counties. Select your city for local {B['industryLower']} information and a free estimate.</p>
+    <p>{NAME} covers Nassau and Suffolk Counties. Select your city for local {B['industryLower']} information and a free design preview.</p>
   </div>
 </section>
 <section class="section">
@@ -1109,7 +1205,7 @@ def make_areas_hub():
     <h2>Serving All of Long Island</h2>
     <p>Call or request online for service in your area.</p>
     <div class="cta-actions">
-      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get Free Estimate</a>
+      <a href="/request-service.html" class="btn btn-secondary btn-lg">Get My Free Design Preview</a>
       <a href="tel:{PHONE_RAW}" class="btn btn-outline-white btn-lg">Call {PHONE}</a>
     </div>
   </div>
@@ -1387,7 +1483,7 @@ def make_thank_you():
       <div class="step-card">
         <div class="step-number">1</div>
         <h3 class="step-title">We'll Be in Touch</h3>
-        <p class="step-desc">Expect a call or text from our team within 1 business hour. We'll confirm your request and answer any questions you have right away.</p>
+        <p class="step-desc">Expect a call or text from our team the same business day. We'll confirm your request and answer any questions you have right away.</p>
       </div>
       <div class="step-card">
         <div class="step-number">2</div>

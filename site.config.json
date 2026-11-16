@@ -52,6 +52,49 @@
         "Garage conversions and in-law suites",
         "Family room and kitchen bump-outs",
         "Full architectural planning and permit coordination"
+      ],
+      "tagline": "Room additions, second-story additions, dormers and extensions from a family-owned Long Island contractor.",
+      "lead": "Room and second-story additions",
+      "coversTitle": "What we build",
+      "covers": [
+        [
+          "Room additions",
+          "A new room off the back or side of the house: a bigger kitchen, a family room or a primary suite."
+        ],
+        [
+          "Second-story additions",
+          "A full or partial second story, for more bedrooms without giving up the yard."
+        ],
+        [
+          "Dormers",
+          "More headroom and floor space upstairs, for a bedroom or a bathroom under the roof."
+        ],
+        [
+          "Home extensions",
+          "Smaller bump-outs and extensions that add a few feet where you need them."
+        ]
+      ],
+      "pricingTitle": "How we price an addition",
+      "pricing": "An addition depends on its size and design and on the house it joins, so we price it after we've seen the house and talked through what you want. You get one written price before any work starts.",
+      "priceFactors": "Your price depends on the size of the addition, the design and the finishes you pick.",
+      "ctaNoun": "addition",
+      "faqs": [
+        [
+          "How long does an addition take?",
+          "A single-story room addition usually takes 3 to 4 months, and a full second-story addition 4 to 6 months. We'll give you a timeline for yours at the first visit."
+        ],
+        [
+          "Can we stay in the house?",
+          "Usually, yes, for a room addition or a dormer. A second-story addition can mean moving out for part of the job, and we'll tell you at the first visit."
+        ],
+        [
+          "What happens at the first visit?",
+          "We come to your home, look at the house and the space you want to add, and talk through the design and your budget. You get a written quote after."
+        ],
+        [
+          "How is the price set?",
+          "By the project. It depends on the size of the addition, the design and the finishes you choose, and you get it in writing before work starts."
+        ]
       ]
     },
     {
@@ -68,6 +111,49 @@
         "Kitchen layout reconfiguration",
         "Appliance integration and electrical updates",
         "Flooring, lighting, and full finishing"
+      ],
+      "tagline": "Full kitchen remodels, new cabinets and countertops, and new layouts from a family-owned Long Island contractor.",
+      "lead": "Full remodels, cabinets and countertops",
+      "coversTitle": "What a kitchen remodel covers",
+      "covers": [
+        [
+          "Full kitchen remodels",
+          "A full renovation: cabinets, countertops, backsplash, flooring and lighting, planned and built as one project."
+        ],
+        [
+          "Cabinets and countertops",
+          "New cabinets and countertops, keeping the layout you have now."
+        ],
+        [
+          "A new layout",
+          "Adding an island or moving the sink and appliances, planned with you at the first visit."
+        ],
+        [
+          "Backsplash, floors and lighting",
+          "A new backsplash, floor and lighting to finish the room."
+        ]
+      ],
+      "pricingTitle": "How we price a kitchen remodel",
+      "pricing": "Every kitchen is different, so we price the project after we've seen the room and you've told us what you want. You get one written price before any work starts.",
+      "priceFactors": "Your price depends on the size of the kitchen, the layout and the cabinets, counters and finishes you pick.",
+      "ctaNoun": "kitchen",
+      "faqs": [
+        [
+          "How long does a kitchen remodel take?",
+          "A full kitchen usually takes 5 to 8 weeks once work starts. We'll give you a timeline for yours at the first visit."
+        ],
+        [
+          "Can we stay in the house?",
+          "Yes. Most families stay home during a kitchen remodel, and we keep the work area closed off."
+        ],
+        [
+          "What happens at the first visit?",
+          "We come to your home, measure the kitchen, look at what's there now and talk through what you want: the layout, the cabinets and counters, and your budget. You get a written quote after."
+        ],
+        [
+          "How is the price set?",
+          "By the project. It depends on the size of the kitchen, the layout and the materials you choose, and you get it in writing before work starts."
+        ]
       ]
     },
     {
@@ -84,6 +170,49 @@
         "Vanity, fixture, and lighting upgrades",
         "Full bathroom gut and rebuild",
         "Permit coordination and plumbing rough-in"
+      ],
+      "tagline": "Full bathroom remodels and walk-in shower conversions from a family-owned Long Island remodeling contractor.",
+      "lead": "Full remodels and tub-to-shower conversions",
+      "coversTitle": "What a bathroom remodel covers",
+      "covers": [
+        [
+          "Full bathroom remodels",
+          "A full renovation, down to the studs where the room needs it: layout, tile, fixtures, vanity and lighting, handled as one project."
+        ],
+        [
+          "Tub to walk-in shower",
+          "The tub comes out and a tiled walk-in shower goes in its place, finished with a glass door or panel."
+        ],
+        [
+          "Floor and wall tile",
+          "New tile on the floor, the walls and the shower, set on a waterproofed base."
+        ],
+        [
+          "Vanities and fixtures",
+          "A new vanity, mirror, toilet and lights, fitted to the room."
+        ]
+      ],
+      "pricingTitle": "How we price a bathroom remodel",
+      "pricing": "Every bathroom is different, so we price the project after we've seen the room and you've told us what you want. You get one written price before any work starts.",
+      "priceFactors": "Your price depends on the size of the room, the layout and the materials you pick.",
+      "ctaNoun": "bathroom",
+      "faqs": [
+        [
+          "How long does a bathroom remodel take?",
+          "A full bathroom usually takes 3 to 5 weeks once work starts. We'll give you a timeline for yours at the first visit."
+        ],
+        [
+          "Do I need to move out?",
+          "Usually not. If it's your only bathroom, we plan the work around that with you before we start."
+        ],
+        [
+          "What happens at the first visit?",
+          "We come to your home, measure the room, look at what's there now and talk through what you want: the layout, the materials and your budget. You get a written quote after."
+        ],
+        [
+          "How is the price set?",
+          "By the project. It depends on the size of the room, the layout and the materials you choose, and you get it in writing before work starts."
+        ]
       ]
     },
     {
@@ -100,6 +229,49 @@
         "Structural engineering and permit coordination",
         "Window installation and exterior finishing",
         "Interior framing, insulation, and drywall"
+      ],
+      "tagline": "Shed and gable dormers that add headroom, light and usable space upstairs, from a family-owned Long Island contractor.",
+      "lead": "Shed and gable dormer construction",
+      "coversTitle": "What a dormer project covers",
+      "covers": [
+        [
+          "Shed dormers",
+          "A long dormer across the back or front of the roof, adding the most headroom and floor space upstairs."
+        ],
+        [
+          "Gable dormers",
+          "A peaked dormer that adds light, headroom and character to a bedroom under the roof."
+        ],
+        [
+          "Full attic conversions",
+          "A dormer built as part of a full attic conversion, with framing, insulation, drywall and finishes handled as one project."
+        ],
+        [
+          "Windows and exterior finishing",
+          "Window installation and exterior finishing matched to your existing roof and siding, with structural engineering and permits coordinated."
+        ]
+      ],
+      "pricingTitle": "How we price a dormer",
+      "pricing": "Every dormer depends on the roof it joins and the room it creates, so we price the project after we've seen the house and talked through what you want. You get one written price before any work starts.",
+      "priceFactors": "Your price depends on the size and type of dormer, the structure of your roof and the finishes you pick.",
+      "ctaNoun": "dormer",
+      "faqs": [
+        [
+          "How long does a dormer take?",
+          "It depends on the size of the dormer and the work inside. We'll give you a timeline for yours at the first visit, before any work starts."
+        ],
+        [
+          "Can we stay in the house?",
+          "Usually, yes. Most dormer work happens at the roof while you stay in the house, and we'll tell you at the first visit if any part means otherwise."
+        ],
+        [
+          "What happens at the first visit?",
+          "We come to your home, look at the roof and the upstairs space, and talk through the design and your budget. You get a written quote after."
+        ],
+        [
+          "How is the price set?",
+          "By the project. It depends on the size and type of dormer, your roof's structure and the finishes you choose, and you get it in writing before work starts."
+        ]
       ]
     },
     {
@@ -116,6 +288,49 @@
         "Egress window installation",
         "Flooring, drywall, and ceiling installation",
         "Electrical, lighting, and HVAC coordination"
+      ],
+      "tagline": "Unfinished basements finished and old basements redone, by a family-owned Long Island remodeling contractor.",
+      "lead": "Finishing and full basement remodels",
+      "coversTitle": "What basement finishing covers",
+      "covers": [
+        [
+          "Finishing an unfinished basement",
+          "Framing, insulation, drywall, flooring and lighting, turning bare concrete and studs into a finished room."
+        ],
+        [
+          "Basement remodels",
+          "A basement renovation for a space that's already finished but dated, or laid out wrong for how you live now."
+        ],
+        [
+          "A basement bathroom",
+          "A full or half bathroom added downstairs."
+        ],
+        [
+          "Family rooms, offices and guest rooms",
+          "The space planned around how you'll use it: a family room, a home office, a gym or a guest room."
+        ]
+      ],
+      "pricingTitle": "How we price a basement",
+      "pricing": "Every basement is different, so we price the project after we've seen the space and you've told us how you want to use it. You get one written price before any work starts.",
+      "priceFactors": "Your price depends on the size of the space, what's there now and the finishes you pick.",
+      "ctaNoun": "basement",
+      "faqs": [
+        [
+          "How long does it take to finish a basement?",
+          "Most basements take about 7 to 12 weeks once work starts. We'll give you a timeline for yours at the first visit."
+        ],
+        [
+          "What if my basement gets damp?",
+          "If we see signs of water at the first visit, we tell you before anything is built, because it has to be dealt with first."
+        ],
+        [
+          "What happens at the first visit?",
+          "We come to your home, measure the space, look at what's there now and talk through how you want to use it and your budget. You get a written quote after."
+        ],
+        [
+          "How is the price set?",
+          "By the project. It depends on the size of the space, what's there now and the finishes you choose, and you get it in writing before work starts."
+        ]
       ]
     },
     {
@@ -132,6 +347,49 @@
         "Electrical, plumbing, and HVAC updates",
         "Full interior finishing — flooring, paint, trim",
         "Single point of contact from demo to completion"
+      ],
+      "tagline": "Whole-home renovations and multi-room rebuilds, managed by one team from demo to completion.",
+      "lead": "Multi-room gut renovations and rebuilds",
+      "coversTitle": "What a full home renovation covers",
+      "covers": [
+        [
+          "Multi-room gut renovations",
+          "A full renovation across several rooms, taken back and rebuilt with new finishes throughout."
+        ],
+        [
+          "Open floor plans",
+          "Structural modifications that open up kitchens, living and dining spaces into one plan."
+        ],
+        [
+          "Systems updated",
+          "Electrical, plumbing and HVAC updates handled as part of the renovation, not patched around."
+        ],
+        [
+          "Full interior finishing",
+          "Flooring, paint and trim throughout, with one point of contact from demo to completion."
+        ]
+      ],
+      "pricingTitle": "How we price a full home renovation",
+      "pricing": "A full home renovation depends on the size of the home and how much is being rebuilt, so we price the project after we've seen the house and talked through the scope with you. You get one written price before any work starts.",
+      "priceFactors": "Your price depends on the size of the home, the scope of the renovation and the finishes you pick.",
+      "ctaNoun": "home renovation",
+      "faqs": [
+        [
+          "How long does a full home renovation take?",
+          "It depends on the scope — a multi-room renovation usually runs several months once work starts. We'll give you a timeline for yours at the first visit."
+        ],
+        [
+          "Can we stay in the house during the work?",
+          "Sometimes, if the work can be phased room by room. For a full gut renovation, most families move out for part of the job — we'll tell you honestly at the first visit."
+        ],
+        [
+          "What happens at the first visit?",
+          "We come to your home, walk the whole house with you, look at what's there now and talk through the scope and your budget. You get a written quote after."
+        ],
+        [
+          "How is the price set?",
+          "By the project. It depends on the size of the home, the scope and the finishes you choose, and you get it in writing before work starts."
+        ]
       ]
     },
     {
@@ -148,31 +406,284 @@
         "Foundation, framing, and structural work",
         "Premium interior and exterior finishing",
         "End-to-end project management"
+      ],
+      "tagline": "Ground-up custom homes designed and built on Long Island, managed end to end by one team.",
+      "lead": "Ground-up custom home construction",
+      "coversTitle": "What building a custom home covers",
+      "covers": [
+        [
+          "Custom design and planning",
+          "Custom architectural design and planning around how you want to live, before anything is built."
+        ],
+        [
+          "Permits and approvals",
+          "Full permit coordination and approvals handled as part of the project."
+        ],
+        [
+          "Foundation and framing",
+          "Foundation, framing and structural work built to code and inspected at every stage."
+        ],
+        [
+          "Premium finishing",
+          "Premium interior and exterior finishing, with end-to-end project management from one team."
+        ]
+      ],
+      "pricingTitle": "How we price a custom home",
+      "pricing": "A custom home depends on its size, design and the lot it sits on, so we price the project after we've talked through your plans and budget. You get one written price before any work starts.",
+      "priceFactors": "Your price depends on the size and design of the home, the lot and the finishes you pick.",
+      "ctaNoun": "custom home",
+      "faqs": [
+        [
+          "How long does it take to build a custom home?",
+          "It depends on the size and design of the home. We'll give you a realistic timeline at the first meeting, before anything is signed."
+        ],
+        [
+          "Do I need my own architect?",
+          "No. We handle custom architectural design and planning as part of the project — and if you already have plans, we can build from those too."
+        ],
+        [
+          "What happens at the first meeting?",
+          "We sit down and talk through what you want to build, where, and your budget, and look at the lot if you have one. You get a written quote after."
+        ],
+        [
+          "How is the price set?",
+          "By the project. It depends on the size and design of the home, the lot and the finishes you choose, and you get it in writing before work starts."
+        ]
       ]
     }
   ],
   "serviceAreas": [
-    { "slug": "massapequa", "name": "Massapequa", "county": "Nassau", "nearbyAreas": ["East Massapequa", "Seaford", "Wantagh", "Farmingdale"] },
-    { "slug": "east-massapequa", "name": "East Massapequa", "county": "Nassau", "nearbyAreas": ["Massapequa", "Seaford", "Bethpage", "Wantagh"] },
-    { "slug": "seaford", "name": "Seaford", "county": "Nassau", "nearbyAreas": ["Wantagh", "Massapequa", "Bellmore", "Levittown"] },
-    { "slug": "wantagh", "name": "Wantagh", "county": "Nassau", "nearbyAreas": ["Seaford", "Bellmore", "Levittown", "East Meadow"] },
-    { "slug": "bellmore", "name": "Bellmore", "county": "Nassau", "nearbyAreas": ["Merrick", "Wantagh", "Seaford", "Freeport"] },
-    { "slug": "merrick", "name": "Merrick", "county": "Nassau", "nearbyAreas": ["Bellmore", "Freeport", "Oceanside", "Baldwin"] },
-    { "slug": "freeport", "name": "Freeport", "county": "Nassau", "nearbyAreas": ["Merrick", "Baldwin", "Rockville Centre", "Bellmore"] },
-    { "slug": "baldwin", "name": "Baldwin", "county": "Nassau", "nearbyAreas": ["Freeport", "Rockville Centre", "Oceanside", "Merrick"] },
-    { "slug": "oceanside", "name": "Oceanside", "county": "Nassau", "nearbyAreas": ["Rockville Centre", "Baldwin", "Freeport", "Lynbrook"] },
-    { "slug": "rockville-centre", "name": "Rockville Centre", "county": "Nassau", "nearbyAreas": ["Oceanside", "Baldwin", "Lynbrook", "Freeport"] },
-    { "slug": "levittown", "name": "Levittown", "county": "Nassau", "nearbyAreas": ["Wantagh", "Hicksville", "Bethpage", "East Meadow"] },
-    { "slug": "bethpage", "name": "Bethpage", "county": "Nassau", "nearbyAreas": ["Levittown", "Plainview", "Farmingdale", "Hicksville"] },
-    { "slug": "farmingdale", "name": "Farmingdale", "county": "Nassau", "nearbyAreas": ["Bethpage", "Massapequa", "Plainview", "East Meadow"] },
-    { "slug": "east-meadow", "name": "East Meadow", "county": "Nassau", "nearbyAreas": ["Wantagh", "Levittown", "Farmingdale", "Westbury"] },
-    { "slug": "plainview", "name": "Plainview", "county": "Nassau", "nearbyAreas": ["Bethpage", "Farmingdale", "Syosset", "Hicksville"] },
-    { "slug": "amityville", "name": "Amityville", "county": "Suffolk", "nearbyAreas": ["Copiague", "Lindenhurst", "Babylon", "West Babylon"] },
-    { "slug": "copiague", "name": "Copiague", "county": "Suffolk", "nearbyAreas": ["Amityville", "Lindenhurst", "West Babylon", "Babylon"] },
-    { "slug": "lindenhurst", "name": "Lindenhurst", "county": "Suffolk", "nearbyAreas": ["Copiague", "West Babylon", "Babylon", "Amityville"] },
-    { "slug": "west-babylon", "name": "West Babylon", "county": "Suffolk", "nearbyAreas": ["Babylon", "Lindenhurst", "Copiague", "Deer Park"] },
-    { "slug": "babylon", "name": "Babylon", "county": "Suffolk", "nearbyAreas": ["West Babylon", "Amityville", "Lindenhurst", "Bay Shore"] },
-    { "slug": "deer-park", "name": "Deer Park", "county": "Suffolk", "nearbyAreas": ["West Babylon", "Babylon", "Brentwood", "Bay Shore"] }
+    {
+      "slug": "massapequa",
+      "name": "Massapequa",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "East Massapequa",
+        "Seaford",
+        "Wantagh",
+        "Farmingdale"
+      ]
+    },
+    {
+      "slug": "east-massapequa",
+      "name": "East Massapequa",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Massapequa",
+        "Seaford",
+        "Bethpage",
+        "Wantagh"
+      ]
+    },
+    {
+      "slug": "seaford",
+      "name": "Seaford",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Wantagh",
+        "Massapequa",
+        "Bellmore",
+        "Levittown"
+      ]
+    },
+    {
+      "slug": "wantagh",
+      "name": "Wantagh",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Seaford",
+        "Bellmore",
+        "Levittown",
+        "East Meadow"
+      ]
+    },
+    {
+      "slug": "bellmore",
+      "name": "Bellmore",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Merrick",
+        "Wantagh",
+        "Seaford",
+        "Freeport"
+      ]
+    },
+    {
+      "slug": "merrick",
+      "name": "Merrick",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Bellmore",
+        "Freeport",
+        "Oceanside",
+        "Baldwin"
+      ]
+    },
+    {
+      "slug": "freeport",
+      "name": "Freeport",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Merrick",
+        "Baldwin",
+        "Rockville Centre",
+        "Bellmore"
+      ]
+    },
+    {
+      "slug": "baldwin",
+      "name": "Baldwin",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Freeport",
+        "Rockville Centre",
+        "Oceanside",
+        "Merrick"
+      ]
+    },
+    {
+      "slug": "oceanside",
+      "name": "Oceanside",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Rockville Centre",
+        "Baldwin",
+        "Freeport",
+        "Lynbrook"
+      ]
+    },
+    {
+      "slug": "rockville-centre",
+      "name": "Rockville Centre",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Oceanside",
+        "Baldwin",
+        "Lynbrook",
+        "Freeport"
+      ]
+    },
+    {
+      "slug": "levittown",
+      "name": "Levittown",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Wantagh",
+        "Hicksville",
+        "Bethpage",
+        "East Meadow"
+      ]
+    },
+    {
+      "slug": "bethpage",
+      "name": "Bethpage",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Levittown",
+        "Plainview",
+        "Farmingdale",
+        "Hicksville"
+      ]
+    },
+    {
+      "slug": "farmingdale",
+      "name": "Farmingdale",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Bethpage",
+        "Massapequa",
+        "Plainview",
+        "East Meadow"
+      ]
+    },
+    {
+      "slug": "east-meadow",
+      "name": "East Meadow",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Wantagh",
+        "Levittown",
+        "Farmingdale",
+        "Westbury"
+      ]
+    },
+    {
+      "slug": "plainview",
+      "name": "Plainview",
+      "county": "Nassau",
+      "nearbyAreas": [
+        "Bethpage",
+        "Farmingdale",
+        "Syosset",
+        "Hicksville"
+      ]
+    },
+    {
+      "slug": "amityville",
+      "name": "Amityville",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Copiague",
+        "Lindenhurst",
+        "Babylon",
+        "West Babylon"
+      ]
+    },
+    {
+      "slug": "copiague",
+      "name": "Copiague",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Amityville",
+        "Lindenhurst",
+        "West Babylon",
+        "Babylon"
+      ]
+    },
+    {
+      "slug": "lindenhurst",
+      "name": "Lindenhurst",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Copiague",
+        "West Babylon",
+        "Babylon",
+        "Amityville"
+      ]
+    },
+    {
+      "slug": "west-babylon",
+      "name": "West Babylon",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "Babylon",
+        "Lindenhurst",
+        "Copiague",
+        "Deer Park"
+      ]
+    },
+    {
+      "slug": "babylon",
+      "name": "Babylon",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "West Babylon",
+        "Amityville",
+        "Lindenhurst",
+        "Bay Shore"
+      ]
+    },
+    {
+      "slug": "deer-park",
+      "name": "Deer Park",
+      "county": "Suffolk",
+      "nearbyAreas": [
+        "West Babylon",
+        "Babylon",
+        "Brentwood",
+        "Bay Shore"
+      ]
+    }
   ],
   "reviews": [
     {
@@ -236,15 +747,49 @@
     }
   ],
   "gallery": [
-    { "src": "/images/gallery/second-story-addition.jpg", "alt": "Second story home addition on Long Island", "label": "Second Story Addition" },
-    { "src": "/images/gallery/kitchen-remodel.jpg", "alt": "Custom kitchen remodel with white cabinetry", "label": "Kitchen Remodel" },
-    { "src": "/images/gallery/bathroom-renovation.jpg", "alt": "Master bathroom renovation with walk-in shower", "label": "Bathroom Renovation" },
-    { "src": "/images/gallery/dormer-addition.jpg", "alt": "Dormer addition expanding attic space on Long Island home", "label": "Dormer Addition" },
-    { "src": "/images/gallery/basement-finish.jpg", "alt": "Finished basement converted to modern living space", "label": "Basement Finish" },
-    { "src": "/images/gallery/full-home-renovation.jpg", "alt": "Full home renovation complete interior rebuild", "label": "Full Home Renovation" }
+    {
+      "src": "/images/gallery/second-story-addition.jpg",
+      "alt": "Second story home addition on Long Island",
+      "label": "Second Story Addition"
+    },
+    {
+      "src": "/images/gallery/kitchen-remodel.jpg",
+      "alt": "Custom kitchen remodel with white cabinetry",
+      "label": "Kitchen Remodel"
+    },
+    {
+      "src": "/images/gallery/bathroom-renovation.jpg",
+      "alt": "Master bathroom renovation with walk-in shower",
+      "label": "Bathroom Renovation"
+    },
+    {
+      "src": "/images/gallery/dormer-addition.jpg",
+      "alt": "Dormer addition expanding attic space on Long Island home",
+      "label": "Dormer Addition"
+    },
+    {
+      "src": "/images/gallery/basement-finish.jpg",
+      "alt": "Finished basement converted to modern living space",
+      "label": "Basement Finish"
+    },
+    {
+      "src": "/images/gallery/full-home-renovation.jpg",
+      "alt": "Full home renovation complete interior rebuild",
+      "label": "Full Home Renovation"
+    }
   ],
   "videos": [
-    { "src": "/videos/bathroom-remodel.mp4", "poster": "/images/video-bathroom-poster.jpg", "label": "Bathroom Remodel", "duration": "0:38" },
-    { "src": "/videos/kitchen-remodel.mp4", "poster": "/images/video-kitchen-poster.jpg", "label": "Kitchen Remodel", "duration": "0:58" }
+    {
+      "src": "/videos/bathroom-remodel.mp4",
+      "poster": "/images/video-bathroom-poster.jpg",
+      "label": "Bathroom Remodel",
+      "duration": "0:38"
+    },
+    {
+      "src": "/videos/kitchen-remodel.mp4",
+      "poster": "/images/video-kitchen-poster.jpg",
+      "label": "Kitchen Remodel",
+      "duration": "0:58"
+    }
   ]
 }
