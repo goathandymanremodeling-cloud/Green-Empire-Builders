@@ -329,7 +329,7 @@ def head(title, desc, canonical, schema="", extra=""):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="{FONT_URL}" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="{FONT_URL}" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="/css/bundle.css" />
+  <link rel="stylesheet" href="/css/bundle.css?v=6" />
   {extra}
 </head>
 <body>"""
@@ -666,7 +666,7 @@ def make_homepage():
     hero_slides = B.get('heroSlides', ['/images/hero-bg.jpg'])
     hero_img = hero_slides[0]
     hero_alts = [
-        "Custom kitchen remodel with white gloss cabinetry, gold fixtures and a large island",
+        "Open-plan kitchen, dining and living remodel with a designer island and staircase",
         "Bathroom renovation with a double vanity, patterned tile floor and glass walk-in shower",
         "Open-plan living and dining space with a custom wine wall",
     ]
@@ -1523,7 +1523,7 @@ def make_thank_you():
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="{FONT_URL}" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="{FONT_URL}" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="/css/bundle.css" />
+  <link rel="stylesheet" href="/css/bundle.css?v=6" />
 </head>
 <body>
 <header class="site-header">
