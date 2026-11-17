@@ -22,6 +22,7 @@ VIDEOS = cfg.get("videos", [])
 PHONE = B["phone"]
 PHONE_RAW = B["phoneRaw"]
 NAME = B["name"]
+WEBHOOK = "https://formsubmit.co/" + B["email"]  # FormSubmit endpoint (same setup as GOAT)
 ADDRESS = f"{B['address']}, {B['city']}, {B['state']} {B['zip']}"
 PRIMARY = B["primaryColor"]
 SECONDARY = B["secondaryColor"]
@@ -409,14 +410,16 @@ def booking_form(compact=False):
     {reviews_badge()}
     <p>Free, no obligation — we call you back the same business day, 8am–6pm.</p>
   </div>
-  <form name="quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" class="booking-form" data-phone="{PHONE}">
+  <form action="{WEBHOOK}" method="POST" class="booking-form" data-phone="{PHONE}">
     <div class="form-group"><label for="c-name">Name *</label><input type="text" id="c-name" name="name" required placeholder="Your full name" /></div>
     <div class="form-group"><label for="c-phone">Phone *</label><input type="tel" id="c-phone" name="phone" required placeholder="{PHONE}" /></div>
     <div class="form-group"><label for="c-service">Service</label>
       <select id="c-service" name="service"><option value="">Select a service...</option>{service_opts}</select>
     </div>
     <div class="form-group"><label for="c-message">Details</label><textarea id="c-message" name="message" rows="3" placeholder="Tell us about your project..."></textarea></div>
-    <input type="text" name="bot-field" style="display:none" />
+    <input type="text" name="_honey" style="display:none" />
+    <input type="hidden" name="_next" value="https://greenempirebuild.com/thank-you.html" />
+    <input type="hidden" name="_captcha" value="false" />
     <button type="submit" class="btn btn-primary btn-block">Get My Free Design Preview →</button>
   </form>
 </div>"""
@@ -427,7 +430,7 @@ def booking_form(compact=False):
     {reviews_badge()}
     <p>Free, no obligation — we call you back the same business day, 8am–6pm.</p>
   </div>
-  <form name="estimate-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html" class="booking-form" data-phone="{PHONE}">
+  <form action="{WEBHOOK}" method="POST" class="booking-form" data-phone="{PHONE}">
     <div class="form-row">
       <div class="form-group"><label for="f-first-name">First Name *</label><input type="text" id="f-first-name" name="first_name" required placeholder="John" /></div>
       <div class="form-group"><label for="f-last-name">Last Name *</label><input type="text" id="f-last-name" name="last_name" required placeholder="Smith" /></div>
@@ -441,7 +444,10 @@ def booking_form(compact=False):
       <select id="f-service" name="service" required><option value="">Select a service...</option>{service_opts}<option value="other">Other / Not Sure</option></select>
     </div>
     <div class="form-group"><label for="f-message">Project Details</label><textarea id="f-message" name="message" rows="4" placeholder="Describe your project, property size, timeline..."></textarea></div>
-    <input type="text" name="bot-field" style="display:none" />
+    <input type="text" name="_honey" style="display:none" />
+    <input type="hidden" name="_subject" value="New Estimate Request - {NAME}" />
+    <input type="hidden" name="_next" value="https://greenempirebuild.com/thank-you.html" />
+    <input type="hidden" name="_captcha" value="false" />
     <button type="submit" class="btn btn-primary btn-block">Get My Free Design Preview →</button>
     <p class="form-disclaimer">We respect your privacy. No spam, ever.</p>
   </form>
