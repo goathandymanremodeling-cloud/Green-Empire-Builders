@@ -341,7 +341,7 @@
       "name": "Full Home Renovation",
       "shortName": "Renovations",
       "icon": "🔨",
-      "image": "/images/drive-hero-living.jpg",
+      "image": "/images/custom-home-living.jpg",
       "description": "Complete home transformations — gut renovations, multi-room remodels, and whole-house updates managed by a single trusted contractor from first demo to final walkthrough.",
       "heroText": "Some homes need more than one room updated — they need a complete transformation. Green Empire Builders manages full-scale Long Island home renovations from start to finish, keeping your project on schedule and your home protected throughout.",
       "bullets": [
@@ -393,7 +393,8 @@
           "How is the price set?",
           "By the project. It depends on the size of the home, the scope and the finishes you choose, and you get it in writing before work starts."
         ]
-      ]
+      ],
+      "cardImage": "/images/drive-hero-living.jpg"
     },
     {
       "slug": "custom-home-building",

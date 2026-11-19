@@ -897,10 +897,7 @@ SERVICE_WORK = {
         ("/images/basement-work-room.jpg", "Newly finished basement room with wood-look flooring"),
         ("/images/basement-work-framing.jpg", "Basement framing and electrical work in progress by our crew"),
     ],
-    "full-home-renovation": [
-        ("/images/custom-home-living.jpg", "Full home renovation — two-story great room with a stone fireplace"),
-        ("/images/drive-hero-living.jpg", "Full home renovation — open-plan living and dining space"),
-    ],
+    "full-home-renovation": [],
     "custom-home-building": [],
 }
 
