@@ -890,9 +890,7 @@ SERVICE_WORK = {
         ("/images/drive-gallery-living.jpg", "Addition living space opening to the pool and garden"),
         ("/images/drive-gallery-glass.jpg", "Finished addition space with sliding glass doors"),
     ],
-    "dormer-construction": [
-        ("/images/drive-work-dormer.jpg", "Dormer addition on a Long Island home"),
-    ],
+    "dormer-construction": [],
     "basement-finishing": [
         ("/images/basement-living.jpg", "Finished basement with a wet bar, media wall and lounge seating"),
         ("/images/basement-work-lounge.jpg", "Finished basement living area with a sectional, wet bar and staircase"),
@@ -903,9 +901,7 @@ SERVICE_WORK = {
         ("/images/custom-home-living.jpg", "Full home renovation — two-story great room with a stone fireplace"),
         ("/images/drive-hero-living.jpg", "Full home renovation — open-plan living and dining space"),
     ],
-    "custom-home-building": [
-        ("/images/custom-home-exterior.jpg", "Custom-built Long Island home at dusk"),
-    ],
+    "custom-home-building": [],
 }
 
 def make_service_page(s):
