@@ -330,7 +330,7 @@ def head(title, desc, canonical, schema="", extra=""):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="{FONT_URL}" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="{FONT_URL}" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="/css/bundle.css?v=7" />
+  <link rel="stylesheet" href="/css/bundle.css?v=8" />
   {extra}
 </head>
 <body>"""
@@ -340,8 +340,10 @@ FILLED_STAR = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" c
 def filled_stars(n=5):
     return FILLED_STAR * n
 
+GOOGLE_G_SVG = '<svg class="rb-g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.2H12v4.3h6.5c-.1 1.1-.8 2.7-2.4 3.8l3.7 2.9c2.3-2.1 3.7-5.2 3.7-9z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.7-2.9c-1 .7-2.4 1.2-4.2 1.2-3.2 0-5.9-2.2-6.9-5.1L1.2 17.2C3.2 21.2 7.3 24 12 24z"/><path fill="#FBBC05" d="M5.1 14.3c-.2-.7-.4-1.5-.4-2.3s.1-1.6.4-2.3L1.2 6.8C.4 8.3 0 10.1 0 12s.4 3.7 1.2 5.2l3.9-2.9z"/><path fill="#EA4335" d="M12 4.7c1.8 0 3 .8 3.7 1.4l3.3-3.2C17.9 1.1 15.2 0 12 0 7.3 0 3.2 2.8 1.2 6.8l3.9 2.9c1-2.9 3.7-5 6.9-5z"/></svg>'
+
 def reviews_badge():
-    return f'<div class="reviews-badge"><span class="rb-stars">{filled_stars(5)}</span><span class="rb-text"><strong>5.0</strong> from 14 Google reviews</span></div>'
+    return f'<div class="reviews-badge">{GOOGLE_G_SVG}<span class="rb-stars">{filled_stars(5)}</span><span class="rb-text"><strong>5.0</strong> from 14 Google reviews</span></div>'
 
 BENEFIT_TAIL = [
     "Free custom design preview",
@@ -920,9 +922,10 @@ def make_homepage():
 
 SERVICE_WORK = {
     "kitchen-remodeling": [
-        ("/images/drive-work-kitchen1.jpg", "White gloss kitchen remodel with a large island and gold fixtures"),
-        ("/images/drive-gallery-kitchen.jpg", "Kitchen remodel with white cabinetry and a center island"),
-        ("/images/drive-gallery-kitchen2.jpg", "Bright white kitchen remodel with a quartz island"),
+        ("/images/kitchen-work1.jpg", "Bright white kitchen remodel with a large island and quartz countertops"),
+        ("/images/kitchen-work2.jpg", "Light wood kitchen remodel with a waterfall-edge island"),
+        ("/images/kitchen-work3.jpg", "White shaker kitchen with tall pantry cabinets"),
+        ("/images/kitchen-work4.jpg", "White kitchen remodel with hardwood floors and a dark island"),
     ],
     "bathroom-remodeling": [
         ("/images/drive-work-bath9.jpg", "Sage-green tiled bathroom with a glass walk-in shower and wood vanity"),
@@ -939,17 +942,17 @@ SERVICE_WORK = {
         ("/images/drive-work-dormer.jpg", "Dormer addition on a Long Island home"),
     ],
     "basement-finishing": [
-        ("/images/drive-gallery-glass.jpg", "Finished basement living space with garden access"),
-        ("/images/drive-work-base.jpg", "Finished basement stairwell and living area"),
+        ("/images/basement-living.jpg", "Finished basement with a wet bar, media wall and lounge seating"),
+        ("/images/basement-work-lounge.jpg", "Finished basement living area with a sectional, wet bar and staircase"),
+        ("/images/basement-work-room.jpg", "Newly finished basement room with wood-look flooring"),
+        ("/images/basement-work-framing.jpg", "Basement framing and electrical work in progress by our crew"),
     ],
     "full-home-renovation": [
-        ("/images/drive-hero-kitchen.jpg", "Full home renovation — kitchen with white gloss cabinetry"),
-        ("/images/drive-hero-bath.jpg", "Full home renovation — bathroom with double vanity"),
+        ("/images/custom-home-living.jpg", "Full home renovation — two-story great room with a stone fireplace"),
         ("/images/drive-hero-living.jpg", "Full home renovation — open-plan living and dining space"),
     ],
     "custom-home-building": [
-        ("/images/drive-about-house.jpg", "Custom home with a modern glass exterior"),
-        ("/images/drive-work-dormer.jpg", "Custom-built Long Island home with dormers"),
+        ("/images/custom-home-exterior.jpg", "Custom-built Long Island home at dusk"),
     ],
 }
 
@@ -1317,7 +1320,7 @@ def make_about():
 <section class="section">
   <div class="container">
     <div class="split-section">
-      <div class="split-img"><img src="/images/custom-home-exterior.jpg" alt="A Long Island home built by {NAME}" width="1200" height="800" /></div>
+      <div class="split-img about-photo"><img src="/images/custom-home-exterior.jpg" alt="A Long Island home built by {NAME}" width="1200" height="800" /></div>
       <div class="split-content">
         <span class="eyebrow">Who We Are</span>
         <h2>Built for Long Island</h2>
@@ -1529,7 +1532,7 @@ def make_thank_you():
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="{FONT_URL}" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="{FONT_URL}" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="/css/bundle.css?v=7" />
+  <link rel="stylesheet" href="/css/bundle.css?v=8" />
 </head>
 <body>
 <header class="site-header">
@@ -1603,7 +1606,7 @@ ARTICLES = [
     {
         "slug": "15-amp-vs-20-amp-outlets",
         "img": "/images/drive-article-outlets.jpg",
-        "imgAlt": "Kitchen sink plumbing and lighting work by Green Empire Builders",
+        "imgAlt": "Installing a new GFCI electrical outlet",
         "title": "15 Amp vs. 20 Amp Outlets: What's the Difference?",
         "desc": "15 amp and 20 amp outlets look almost the same, but they are not interchangeable. How to tell them apart, where each one belongs, and the mistakes that cause trouble — from the Green Empire Builders team.",
         "body": """
