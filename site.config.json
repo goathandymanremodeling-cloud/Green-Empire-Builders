@@ -214,7 +214,8 @@
           "How is the price set?",
           "By the project. It depends on the size of the room, the layout and the materials you choose, and you get it in writing before work starts."
         ]
-      ]
+      ],
+      "cardImage": "/images/bathroom-card.jpg"
     },
     {
       "slug": "dormer-construction",
