@@ -737,16 +737,6 @@ def make_homepage():
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="container stats-grid">
-    <div class="stat"><span class="stat-n">1</span><span class="stat-l">You Are Our Only Focus</span></div>
-    <div class="stat"><span class="stat-n">100%</span><span class="stat-l">Customer Satisfaction</span></div>
-    <div class="stat"><span class="stat-n">{len(AREAS)}+</span><span class="stat-l">Cities Served</span></div>
-    <div class="stat"><span class="stat-n">500+</span><span class="stat-l">Projects Completed</span></div>
-  </div>
-</div>
-
 <!-- CONTACT CARDS -->
 <section class="contact-cards-section">
   <div class="container contact-cards-grid">
@@ -777,45 +767,7 @@ def make_homepage():
   </div>
 </section>
 
-<!-- THE DIFFERENCE -->
-<section class="difference-section">
-  <div class="container">
-    <div class="section-header section-header-light">
-      <span class="eyebrow-light">Why Choose Us</span>
-      <h2>The {NAME} Difference</h2>
-    </div>
-    <div class="difference-grid">
-      <div class="difference-card">
-        <div class="icon-circle icon-circle-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
-        <h3>Licensed &amp; Insured</h3>
-        <p>Fully licensed in New York State with comprehensive liability and workers' compensation on every project.</p>
-      </div>
-      <div class="difference-card">
-        <div class="icon-circle icon-circle-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-        </div>
-        <h3>Custom Design</h3>
-        <p>Every project is designed around your vision, your property, and your budget — not a cookie-cutter template.</p>
-      </div>
-      <div class="difference-card">
-        <div class="icon-circle icon-circle-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h3>Permit Coordination</h3>
-        <p>We handle all permits and municipal approvals — no surprises, no delays, work starts on time.</p>
-      </div>
-      <div class="difference-card">
-        <div class="icon-circle icon-circle-outline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <h3>100% Satisfaction</h3>
-        <p>The job isn't finished until it meets your standard. We back every project with a full satisfaction guarantee.</p>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- SERVICES -->
 <section class="section" id="services">
