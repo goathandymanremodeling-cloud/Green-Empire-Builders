@@ -330,7 +330,7 @@ def head(title, desc, canonical, schema="", extra=""):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="{FONT_URL}" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="{FONT_URL}" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="/css/bundle.css?v=6" />
+  <link rel="stylesheet" href="/css/bundle.css?v=7" />
   {extra}
 </head>
 <body>"""
@@ -542,8 +542,9 @@ LOCAL_BIZ_SCHEMA = f"""<script type="application/ld+json">
 # ─────────────────────────────────────────────────────────
 
 def service_card_header(s):
-    if s.get("image"):
-        return f'<img class="service-card-img" src="{s["image"]}" alt="{s["name"]}" loading="lazy" />'
+    img = s.get("cardImage") or s.get("image")
+    if img:
+        return f'<img class="service-card-img" src="{img}" alt="{s["name"]}" loading="lazy" />'
     return f'<div class="service-card-placeholder" aria-hidden="true"></div>'
 
 
@@ -828,8 +829,6 @@ def make_homepage():
   </div>
 </section>
 
-{work_section()}
-
 {video_section()}
 
 <!-- BOOK A CONSULTATION -->
@@ -926,9 +925,10 @@ SERVICE_WORK = {
         ("/images/drive-gallery-kitchen2.jpg", "Bright white kitchen remodel with a quartz island"),
     ],
     "bathroom-remodeling": [
-        ("/images/drive-hero-bath.jpg", "Bathroom renovation with a double vanity and glass walk-in shower"),
-        ("/images/drive-work-vanity.jpg", "Bathroom vanity renovation with warm wood cabinetry"),
-        ("/images/drive-work-bath2.jpg", "Updated bathroom with new fixtures and vanity"),
+        ("/images/drive-work-bath9.jpg", "Sage-green tiled bathroom with a glass walk-in shower and wood vanity"),
+        ("/images/drive-work-bath3.jpg", "Master bathroom remodel with a freestanding tub and marble-look glass shower"),
+        ("/images/drive-work-bath7.jpg", "Bathroom remodel with natural stone tile, a glass shower and a jetted tub"),
+        ("/images/drive-work-bath12.jpg", "Twin wood vanities with backlit mirrors in a renovated master bathroom"),
     ],
     "home-additions": [
         ("/images/drive-about-house.jpg", "Home addition with floor-to-ceiling glass walls"),
@@ -1317,7 +1317,7 @@ def make_about():
 <section class="section">
   <div class="container">
     <div class="split-section">
-      <div class="split-img"><img src="/images/drive-about-house.jpg" alt="A Long Island home renovated by {NAME} — modern glass exterior" width="1070" height="1600" /></div>
+      <div class="split-img"><img src="/images/custom-home-exterior.jpg" alt="A Long Island home built by {NAME}" width="1200" height="800" /></div>
       <div class="split-content">
         <span class="eyebrow">Who We Are</span>
         <h2>Built for Long Island</h2>
@@ -1529,7 +1529,7 @@ def make_thank_you():
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="{FONT_URL}" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="{FONT_URL}" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="/css/bundle.css?v=6" />
+  <link rel="stylesheet" href="/css/bundle.css?v=7" />
 </head>
 <body>
 <header class="site-header">

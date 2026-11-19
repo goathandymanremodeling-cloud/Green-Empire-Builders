@@ -103,6 +103,7 @@
       "shortName": "Kitchens",
       "icon": "🍳",
       "image": "/images/drive-hero-kitchen.jpg",
+      "cardImage": "/images/kitchen-island.jpg",
       "description": "Transform your kitchen into the heart of your home — custom cabinetry, premium countertops, updated layouts, and modern finishes designed around how you actually cook and live.",
       "heroText": "A kitchen remodel is one of the best investments a Long Island homeowner can make. Green Empire Builders handles every detail — from demolition to the final cabinet hardware — so your new kitchen is exactly what you envisioned.",
       "bullets": [
@@ -280,6 +281,7 @@
       "shortName": "Basements",
       "icon": "🏚️",
       "image": "/images/drive-gallery-glass.jpg",
+      "cardImage": "/images/basement-living.jpg",
       "description": "Turn your unfinished basement into livable square footage — home offices, playrooms, entertainment spaces, or guest suites built with proper waterproofing, egress, and code compliance.",
       "heroText": "An unfinished basement is wasted potential. Green Empire Builders transforms Long Island basements into fully finished, code-compliant living spaces — from framing and waterproofing through flooring, lighting, and final finishes.",
       "bullets": [
@@ -398,6 +400,7 @@
       "shortName": "Custom Homes",
       "icon": "🏡",
       "image": "/images/drive-about-house.jpg",
+      "cardImage": "/images/custom-home-exterior.jpg",
       "description": "Build the home you've always wanted, exactly the way you want it — custom design, premium materials, and hands-on project management from foundation to final key.",
       "heroText": "Building a custom home on Long Island is one of the most significant decisions you'll make. Green Empire Builders guides you through every phase — site prep, design, permits, construction, and finishing — with full transparency and no surprises.",
       "bullets": [
